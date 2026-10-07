@@ -69,6 +69,17 @@ jobs:
           distribution: zulu
           java-version: "8"
 
+      - name: Select Xcode 26 (upstream uses the iOS 26 SDK: UIBarButtonItem.sharesBackground etc.)
+        shell: bash
+        run: |
+          set -euo pipefail
+          X="$(ls -d /Applications/Xcode_26*.app 2>/dev/null | grep -v beta | sort -V | tail -1 || true)"
+          if [ -z "$X" ]; then X="$(ls -d /Applications/Xcode_26*.app | sort -V | tail -1)"; fi
+          echo "Using $X"
+          sudo xcode-select -s "$X/Contents/Developer"
+          xcodebuild -version
+          xcrun --sdk iphoneos --show-sdk-version
+
       - name: Install build tools
         shell: bash
         run: |
