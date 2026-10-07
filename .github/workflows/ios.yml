@@ -69,7 +69,7 @@ jobs:
           distribution: zulu
           java-version: "8"
 
-      - name: Select Xcode 26 (upstream uses the iOS 26 SDK: UIBarButtonItem.sharesBackground etc.)
+      - name: Select Xcode 26 (iOS 26 SDK, as upstream)
         shell: bash
         run: |
           set -euo pipefail
