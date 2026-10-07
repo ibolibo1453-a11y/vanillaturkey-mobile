@@ -142,148 +142,183 @@ export function capeAngles(n, t, lean, side, fwd, vy, outRx, outRz, params) {
   }
 }
 
-// ---------------------------------------------------------------- R5-E cape cloth (verlet chain, world space) - 1:1 port of render/CapeChain.java
-const CK = 0.9375 / 16, CSEG = 3 * CK, CPLANE = 2.15, CG = 24, CKN = 3.6, CKT = 0.55, CMAX_DT = 1 / 125
-const CN = 6
+// ---------------------------------------------------------------- R5-E cape cloth v2 (body-frame spring chain) - 1:1 port of render/CapeChain.java
+const CN = 6, CH = 1 / 120, CSEG = 3, CHALF_W = 5, CPLANE = 2.0, CTELEPORT = 4.0, CP0 = 4.5
 const wrapDeg = (a) => { a %= 360; if (a >= 180) a -= 360; if (a < -180) a += 360; return a }
+const cclamp = (v, lo, hi) => (v < lo ? lo : v > hi ? hi : v)
+const cmargin = (cy) => { const m = 0.10 + 0.045 * cy; return m > 0.8 ? 0.8 : m }
 export class CapeChain {
   constructor() {
-    this.x = new Float64Array(CN + 1); this.y = new Float64Array(CN + 1); this.z = new Float64Array(CN + 1)
-    this.ox = new Float64Array(CN + 1); this.oy = new Float64Array(CN + 1); this.oz = new Float64Array(CN + 1)
-    this.rx = new Float64Array(CN); this.rz = new Float64Array(CN)   // degrees, relative segment rotations about X / Z
-    this.init = false; this.windScale = 1
-    this.p = { x: 0, y: 0, z: 0, yaw: 0, lean: 0, sneak: 0, ely: 0 }
-    this.b = {}   // basis scratch (fixed shape after the first call)
+    const f = () => new Float64Array(CN)
+    this.rx = f(); this.rz = f()                      // degrees, RELATIVE segment rotations about X / Z (applied as Rz * Rx)
+    this.jx = new Float64Array(CN + 1); this.jy = new Float64Array(CN + 1); this.jz = new Float64Array(CN + 1)
+    this.a = f(); this.b = f(); this.av = f(); this.bv = f(); this.pa = f(); this.pb = f(); this.ta = f(); this.tb = f()
+    this.oa = f(); this.ob = f()                      // interpolated absolute angles (rad, model frame)
+    this.init = false; this.windScale = 1; this.legOff = 0; this.resetFlag = false
+    this.pX = 0; this.pY = 0; this.pZ = 0; this.pYaw = 0; this.pLean = 0; this.pSneak = 0; this.pEly = 0
+    this.fVf = 0; this.fVl = 0; this.fVu = 0; this.fW = 0; this.phiF = 0; this.acc = 0
+    this.sneak = 0; this.ely = 0; this.lean = 0; this.th = 0; this.st = 0; this.ct = 1; this.rox = 0; this.roy = 0; this.roz = 0
   }
   reset() { this.init = false }
+  /** dt seconds (any frame time), feet position (blocks), yaw / lean (deg), sneak 0..1, ely root offset (px), t wind phase (s) */
   step(dt, px, py, pz, yaw, lean, sneak, ely, t) {
-    const P = this.p, x = this.x, y = this.y, z = this.z, ox = this.ox, oy = this.oy, oz = this.oz
-    if (!this.init || Math.abs(px - P.x) + Math.abs(pz - P.z) + Math.abs(py - P.y) > 8 || dt > 0.5) {
-      P.x = px; P.y = py; P.z = pz; P.yaw = yaw; P.lean = lean; P.sneak = sneak; P.ely = ely
-      this.basis(px, py, pz, yaw, lean, sneak, ely)
-      const B = this.b
-      for (let i = 0; i <= CN; i++) {
-        const cy = 3 * i, cz = i === 0 ? 2 : CPLANE
-        x[i] = ox[i] = B.orx + (B.e1x * cy + B.e2x * cz) * CK
-        y[i] = oy[i] = B.ory + (B.e1y * cy + B.e2y * cz) * CK
-        z[i] = oz[i] = B.orz + (B.e1z * cy + B.e2z * cz) * CK
-      }
-      this.init = true
-      this.outAngles()
-      return
+    this.resetFlag = false
+    let disp = Math.abs(px - this.pX) + Math.abs(pz - this.pZ) + Math.abs(py - this.pY)
+    if (!this.init) { this.hardReset(px, py, pz, yaw, lean, sneak, ely); this.output(); return }
+    if (dt <= 0.0005 && disp < 1e-9) { this.sneak = sneak; this.ely = ely; this.lean = lean; this.pSneak = sneak; this.pEly = ely; this.pLean = lean; this.fix(); this.output(); return }
+    const rawSp = Math.hypot(px - this.pX, pz - this.pZ) / Math.max(dt, 0.0005)
+    if (disp > CTELEPORT || dt > 5 || rawSp > 60 || Math.abs(py - this.pY) / Math.max(dt, 0.0005) > 120) {
+      this.pX = px; this.pY = py; this.pZ = pz; this.pYaw = yaw
+      this.fVf = this.fVl = this.fVu = this.fW = 0
+      this.resetFlag = true
+      if (dt > 5) this.hardReset(px, py, pz, yaw, lean, sneak, ely)
+      dt = Math.min(dt, 0.1); disp = 0
     }
-    if (dt <= 1e-6) return
+    if (dt < 0.0005) dt = 0.0005
+    const vdt = dt
     if (dt > 0.1) dt = 0.1
-    let n = Math.ceil(dt / CMAX_DT); if (n < 1) n = 1
-    const h = dt / n, dyaw = wrapDeg(yaw - P.yaw)
+    let vx = (px - this.pX) / vdt, vy = (py - this.pY) / vdt, vz = (pz - this.pZ) / vdt
+    const w = cclamp(wrapDeg(yaw - this.pYaw) / vdt, -720, 720)
+    const sp = Math.sqrt(vx * vx + vz * vz)
+    if (sp > 14) { const k = 14 / sp; vx *= k; vz *= k }
+    vy = cclamp(vy, -40, 20)
+    const psi = yaw * Math.PI / 180, phi = lean * Math.PI / 180
+    const sps = Math.sin(psi), cps = Math.cos(psi), sf = Math.sin(phi), cf = Math.cos(phi)
+    const tvl = vx * cps + vz * sps
+    const tvu = vx * (-sf * sps) + vy * cf + vz * (sf * cps)
+    const tvf = vx * (-cf * sps) + vy * (-sf) + vz * (cf * cps)
+    this.acc += dt
+    let n = Math.floor(this.acc / CH)
+    if (n > 24) n = 24
+    this.acc -= n * CH
+    if (this.acc > CH) this.acc = 0
+    const kv = 1 - Math.exp(-CH / 0.13), kw = 1 - Math.exp(-CH / 0.09)
     for (let s = 1; s <= n; s++) {
-      const a = s / n
-      const cel = P.ely + (ely - P.ely) * a
-      this.basis(P.x + (px - P.x) * a, P.y + (py - P.y) * a, P.z + (pz - P.z) * a, P.yaw + dyaw * a, P.lean + (lean - P.lean) * a, P.sneak + (sneak - P.sneak) * a, cel)
-      this.substep(h, t - dt + dt * a, cel)
+      this.sneak = sneak; this.ely = ely; this.lean = lean   // crouch / lean / elytra are applied instantly by the pose stack
+      this.fVf += (tvf - this.fVf) * kv; this.fVl += (tvl - this.fVl) * kv; this.fVu += (tvu - this.fVu) * kv
+      this.fW += (w - this.fW) * kw
+      this.integrate(CH, t - (n - s) * CH)
     }
-    P.x = px; P.y = py; P.z = pz; P.yaw = yaw; P.lean = lean; P.sneak = sneak; P.ely = ely
-    this.outAngles()
+    this.sneak = sneak; this.ely = ely; this.lean = lean
+    this.pX = px; this.pY = py; this.pZ = pz; this.pYaw = yaw; this.pLean = lean; this.pSneak = sneak; this.pEly = ely
+    this.fix()
+    this.output()
   }
-  basis(X, Y, Z, yawDeg, leanDeg, sneak, ely) {
-    const B = this.b
-    const psi = yawDeg * DEG, phi = leanDeg * DEG
-    const sp = Math.sin(psi), cp = Math.cos(psi), sf = Math.sin(phi), cf = Math.cos(phi)
-    B.lx = cp; B.lz = sp
-    B.ux = -sf * sp; B.uy = cf; B.uz = sf * cp
-    B.fx = -cf * sp; B.fy = -sf; B.fz = cf * cp
-    B.bx = X; B.by = Y; B.bz = Z
-    const th = 0.5 * sneak, st = Math.sin(th), ct = Math.cos(th)
-    B.e0x = B.lx; B.e0y = 0; B.e0z = B.lz
-    const ymx = -B.ux, ymy = -B.uy, ymz = -B.uz, zmx = -B.fx, zmy = -B.fy, zmz = -B.fz
-    B.e1x = ct * ymx + st * zmx; B.e1y = ct * ymy + st * zmy; B.e1z = ct * ymz + st * zmz
-    B.e2x = -st * ymx + ct * zmx; B.e2y = -st * ymy + ct * zmy; B.e2z = -st * ymz + ct * zmz
-    const ty = 3.2 * sneak
-    B.orx = X + CK * (24 * B.ux + ty * ymx); B.ory = Y + CK * (24 * B.uy + ty * ymy); B.orz = Z + CK * (24 * B.uz + ty * ymz)
-    B.orx += B.e2x * CK * ely; B.ory += B.e2y * CK * ely; B.orz += B.e2z * CK * ely
+  hardReset(px, py, pz, yaw, lean, sneak, ely) {
+    this.pX = px; this.pY = py; this.pZ = pz; this.pYaw = yaw; this.pLean = lean; this.pSneak = sneak; this.pEly = ely
+    this.sneak = sneak; this.ely = ely; this.lean = lean
+    this.fVf = this.fVl = this.fVu = this.fW = 0
+    this.phiF = lean * Math.PI / 180
+    this.acc = 0
+    const p0 = CP0 * Math.PI / 180
+    for (let i = 0; i < CN; i++) { this.a[i] = this.pa[i] = p0; this.b[i] = this.pb[i] = 0; this.av[i] = this.bv[i] = 0 }
+    this.init = true; this.resetFlag = true
+    this.pose(); this.collide()
+    for (let i = 0; i < CN; i++) { this.pa[i] = this.a[i]; this.pb[i] = this.b[i] }
   }
-  substep(h, t, ely) {
-    const B = this.b, x = this.x, y = this.y, z = this.z, ox = this.ox, oy = this.oy, oz = this.oz, W = this.windScale
-    x[0] = B.orx + B.e2x * 2 * CK; y[0] = B.ory + B.e2y * 2 * CK; z[0] = B.orz + B.e2z * 2 * CK
-    for (let i = 1; i <= CN; i++) {
-      const sc = 0.25 + 1.75 * (i - 1) / (CN - 1)
-      const fn = 1 - Math.exp(-CKN * sc * h), ft = 1 - Math.exp(-CKT * sc * h)
-      const vx = x[i] - ox[i], vy = y[i] - oy[i], vz = z[i] - oz[i]
-      ox[i] = x[i]; oy[i] = y[i]; oz[i] = z[i]
-      const wph = t * 1.1 + i * 0.75
-      const wx = W * (0.45 * Math.sin(0.37 * t + 0.4) + 0.55 * Math.sin(1.31 * t + i * 0.8) + 0.2 * Math.sin(3.7 * wph))
-      const wz = W * (0.40 * Math.sin(0.29 * t + 1.7) + 0.50 * Math.sin(1.7 * t - i * 0.6) + 0.2 * Math.sin(4.3 * wph + 1.0))
-      const wy = W * 0.15 * Math.sin(2.1 * t + i * 1.1)
-      const nx = B.e2x, ny = B.e2y, nz = B.e2z
-      const rvx = vx / h - wx, rvy = vy / h - wy, rvz = vz / h - wz
-      const dn = rvx * nx + rvy * ny + rvz * nz
-      const tx = rvx - dn * nx, ty = rvy - dn * ny, tz = rvz - dn * nz
-      const ax = -(dn * nx * fn + tx * ft), ay = -(dn * ny * fn + ty * ft), az = -(dn * nz * fn + tz * ft)
-      const damp = 0.9985
-      x[i] += vx * damp + ax * h; y[i] += vy * damp + ay * h - CG * h * h; z[i] += vz * damp + az * h
+  /** the pose of the frame (crouch / elytra) may differ from the one the last substep collided with: push both interpolation states out of the body */
+  fix() {
+    this.pose(); this.collide()
+    const a = this.a, b = this.b, pa = this.pa, pb = this.pb, ta = this.ta, tb = this.tb
+    for (let i = 0; i < CN; i++) { ta[i] = a[i]; tb[i] = b[i]; a[i] = pa[i]; b[i] = pb[i] }
+    this.collide()
+    for (let i = 0; i < CN; i++) { pa[i] = a[i]; pb[i] = b[i]; a[i] = ta[i]; b[i] = tb[i] }
+  }
+  pose() {
+    this.th = 0.5 * this.sneak; this.st = Math.sin(this.th); this.ct = Math.cos(this.th)
+    this.rox = 0; this.roy = 3.2 * this.sneak - this.st * this.ely; this.roz = this.ct * this.ely
+  }
+  integrate(h, t) {
+    this.pose()
+    const a = this.a, b = this.b, av = this.av, bv = this.bv, ta = this.ta, tb = this.tb
+    this.phiF += (this.lean * Math.PI / 180 - this.phiF) * (1 - Math.exp(-h / 0.15))
+    const phi = this.phiF, vf = this.fVf, vu = this.fVu
+    const lf = vf >= 0 ? 36 * Math.tanh(vf / 5.2) : 5 * Math.tanh(vf / 3)
+    const lu = vu < 0 ? 26 * Math.tanh(-vu / 8) : -9 * Math.tanh(vu / 6)
+    const lift = lf + lu
+    const sway = -20 * Math.tanh(this.fVl / 4.5) + 15 * Math.tanh(this.fW / 220)
+    const ws = this.windScale
+    for (let i = 0; i < CN; i++) {
+      const wg = 0.30 + 0.70 * i / (CN - 1)
+      const idleP = ws * 0.45 * Math.sin(0.8 * t + 0.7 * i) * wg
+      const idleR = ws * 0.55 * Math.sin(0.55 * t + 0.9 * i + 1.0) * wg
+      ta[i] = (CP0 + wg * lift + idleP) * Math.PI / 180 - phi
+      tb[i] = (wg * sway + idleR) * Math.PI / 180
     }
-    for (let i = 1; i <= 2; i++) {   // shoulders hold the top of the cape against the back (the hem is free)
-      const kk = 1 - Math.exp(-(i === 1 ? 16 : 5) * h)
-      const tx = B.orx + (B.e1x * 3 * i + B.e2x * CPLANE) * CK, ty = B.ory + (B.e1y * 3 * i + B.e2y * CPLANE) * CK, tz = B.orz + (B.e1z * 3 * i + B.e2z * CPLANE) * CK
-      x[i] += (tx - x[i]) * kk; y[i] += (ty - y[i]) * kk; z[i] += (tz - z[i]) * kk
+    for (let i = 0; i < CN; i++) { this.pa[i] = a[i]; this.pb[i] = b[i] }
+    for (let i = 0; i < CN; i++) {
+      const f = 2.5 - 1.1 * i / (CN - 1), w0 = 2 * Math.PI * f, zeta = 1.15
+      const ap = i > 0 ? a[i - 1] : a[0], an = i < CN - 1 ? a[i + 1] : a[i]
+      const bp = i > 0 ? b[i - 1] : b[0], bn = i < CN - 1 ? b[i + 1] : b[i]
+      const kc = 38
+      av[i] = cclamp(av[i] + (w0 * w0 * (ta[i] - a[i]) - 2 * zeta * w0 * av[i] + kc * (ap + an - 2 * a[i])) * h, -3, 3)   // cloth never swings faster than ~170 deg/s
+      bv[i] = cclamp(bv[i] + (w0 * w0 * (tb[i] - b[i]) - 2 * zeta * w0 * bv[i] + kc * (bp + bn - 2 * b[i])) * h, -3, 3)
     }
-    for (let it = 0; it < 4; it++) {
+    for (let i = 0; i < CN; i++) {
+      a[i] = cclamp(a[i] + av[i] * h, -1.2, 1.45)
+      b[i] = cclamp(b[i] + bv[i] * h, -0.9, 0.9)
+    }
+    this.collide()
+  }
+  violation(cx, cy, cz) {
+    let v = 0
+    if (cy > -1 && cy < 13 && cx > -5.6 && cx < 5.6) { const need = CPLANE + cmargin(cy) - cz; if (need > v) v = need }
+    const mz = this.roz + this.st * cy + this.ct * cz, my = this.roy + this.ct * cy - this.st * cz
+    if (my > 11.5 && my < 25 && cx > -5.6 && cx < 5.6) { const need = CPLANE + Math.max(this.legOff, this.ely) + 0.45 - mz; if (need > v) v = need }
+    return v
+  }
+  collide() {
+    const a = this.a, b = this.b, av = this.av, ct = this.ct, st = this.st
+    for (let pass = 0; pass < 3; pass++) {
+      let moved = false
+      let a00 = 1, a01 = 0, a02 = 0, a10 = 0, a11 = 1, a12 = 0, a20 = 0, a21 = 0, a22 = 1
+      let px = 0, py = 0, pz = 2
       for (let i = 0; i < CN; i++) {
-        const dx = x[i + 1] - x[i], dy = y[i + 1] - y[i], dz = z[i + 1] - z[i]
-        const d = Math.sqrt(dx * dx + dy * dy + dz * dz)
-        if (d < 1e-9) continue
-        const k = (d - CSEG) / d
-        if (i === 0) { x[1] -= dx * k; y[1] -= dy * k; z[1] -= dz * k }
-        else {
-          const hx = dx * k * 0.5, hy = dy * k * 0.5, hz = dz * k * 0.5
-          x[i] += hx; y[i] += hy; z[i] += hz; x[i + 1] -= hx; y[i + 1] -= hy; z[i + 1] -= hz
+        const sa = Math.sin(a[i]), ca = Math.cos(a[i]), sb = Math.sin(b[i]), cb = Math.cos(b[i])
+        const dxm = sb * ca, dym = cb * ca, dzm = sa
+        const drx = dxm, dry = ct * dym + st * dzm, drz = -st * dym + ct * dzm
+        const lx0 = a00 * drx + a10 * dry + a20 * drz, ly0 = a01 * drx + a11 * dry + a21 * drz, lz0 = a02 * drx + a12 * dry + a22 * drz
+        const ra = Math.asin(cclamp(lz0, -1, 1)), rb = Math.atan2(-lx0, ly0)
+        const sra = Math.sin(ra), cra = Math.cos(ra), srb = Math.sin(rb), crb = Math.cos(rb)
+        const m00 = crb, m10 = srb, m20 = 0, m01 = -cra * srb, m11 = cra * crb, m21 = sra, m02 = sra * srb, m12 = -sra * crb, m22 = cra
+        const n00 = a00 * m00 + a01 * m10 + a02 * m20, n01 = a00 * m01 + a01 * m11 + a02 * m21, n02 = a00 * m02 + a01 * m12 + a02 * m22
+        const n10 = a10 * m00 + a11 * m10 + a12 * m20, n11 = a10 * m01 + a11 * m11 + a12 * m21, n12 = a10 * m02 + a11 * m12 + a12 * m22
+        const n20 = a20 * m00 + a21 * m10 + a22 * m20, n21 = a20 * m01 + a21 * m11 + a22 * m21, n22 = a20 * m02 + a21 * m12 + a22 * m22
+        a00 = n00; a01 = n01; a02 = n02; a10 = n10; a11 = n11; a12 = n12; a20 = n20; a21 = n21; a22 = n22
+        const ex = px + a01 * CSEG, ey = py + a11 * CSEG, ez = pz + a21 * CSEG
+        const wx = a00 * CHALF_W, wy = a10 * CHALF_W, wz = a20 * CHALF_W
+        this.jx[i] = px; this.jy[i] = py; this.jz[i] = pz; this.jx[i + 1] = ex; this.jy[i + 1] = ey; this.jz[i + 1] = ez
+        let need = this.violation(ex, ey, ez)
+        need = Math.max(need, this.violation(ex - wx, ey - wy, ez - wz))
+        need = Math.max(need, this.violation(ex + wx, ey + wy, ez + wz))
+        if (need > 1e-6) {
+          let da = need / (CSEG * Math.max(0.35, Math.cos(a[i])))
+          if (da > 0.5) da = 0.5
+          a[i] += da
+          if (av[i] < 0) av[i] *= 0.2
+          moved = true
         }
+        px = ex; py = ey; pz = ez
       }
-      for (let i = 0; i + 2 <= CN; i++) {
-        const dx = x[i + 2] - x[i], dy = y[i + 2] - y[i], dz = z[i + 2] - z[i]
-        const d = Math.sqrt(dx * dx + dy * dy + dz * dz), min = 2 * CSEG * 0.47
-        if (d < min && d > 1e-9) {
-          const k = (min - d) / d * (i === 0 ? 1 : 0.5)
-          if (i === 0) { x[2] += dx * k; y[2] += dy * k; z[2] += dz * k }
-          else {
-            x[i] -= dx * k * 0.5; y[i] -= dy * k * 0.5; z[i] -= dz * k * 0.5
-            x[i + 2] += dx * k * 0.5; y[i + 2] += dy * k * 0.5; z[i + 2] += dz * k * 0.5
-          }
-        }
-      }
-      for (let i = 1; i <= CN; i++) this.collide(i, ely)
+      if (!moved) break
     }
   }
-  collide(i, ely) {
-    const B = this.b, x = this.x, y = this.y, z = this.z
-    const dx = x[i] - B.orx, dy = y[i] - B.ory, dz = z[i] - B.orz
-    const cx = (dx * B.e0x + dy * B.e0y + dz * B.e0z) / CK, cy = (dx * B.e1x + dy * B.e1y + dz * B.e1z) / CK, cz = (dx * B.e2x + dy * B.e2y + dz * B.e2z) / CK
-    if (cy > -1 && cy < 13 && cx > -5.6 && cx < 5.6 && cz < CPLANE) {
-      const m = (CPLANE - cz) * CK
-      x[i] += B.e2x * m; y[i] += B.e2y * m; z[i] += B.e2z * m
-    }
-    const qx = x[i] - B.bx, qy = y[i] - B.by, qz = z[i] - B.bz
-    const ql = (qx * B.lx + qz * B.lz) / CK, qu = (qx * B.ux + qy * B.uy + qz * B.uz) / CK, qf = (qx * B.fx + qy * B.fy + qz * B.fz) / CK
-    const lim = -(CPLANE + ely)
-    if (qu > -1 && qu < 12.5 && ql > -5.6 && ql < 5.6 && qf > lim) {
-      const m = (qf - lim) * CK
-      x[i] -= B.fx * m; y[i] -= B.fy * m; z[i] -= B.fz * m
-    }
-    if (y[i] < B.by + 0.02) y[i] = B.by + 0.02
-  }
-  outAngles() {
-    const B = this.b, x = this.x, y = this.y, z = this.z
+  output() {
+    const al = cclamp(this.acc / CH, 0, 1)
+    const a = this.a, b = this.b, pa = this.pa, pb = this.pb, oa = this.oa, ob = this.ob
+    for (let i = 0; i < CN; i++) { oa[i] = pa[i] + (a[i] - pa[i]) * al; ob[i] = pb[i] + (b[i] - pb[i]) * al }
+    this.pose()
+    const ct = this.ct, st = this.st
     let a00 = 1, a01 = 0, a02 = 0, a10 = 0, a11 = 1, a12 = 0, a20 = 0, a21 = 0, a22 = 1
     for (let i = 0; i < CN; i++) {
-      let dx = x[i + 1] - x[i], dy = y[i + 1] - y[i], dz = z[i + 1] - z[i]
-      let d = Math.sqrt(dx * dx + dy * dy + dz * dz); if (d < 1e-9) d = 1
-      dx /= d; dy /= d; dz /= d
-      const r0 = dx * B.e0x + dy * B.e0y + dz * B.e0z, r1 = dx * B.e1x + dy * B.e1y + dz * B.e1z, r2 = dx * B.e2x + dy * B.e2y + dz * B.e2z
-      const l0 = a00 * r0 + a10 * r1 + a20 * r2, l1 = a01 * r0 + a11 * r1 + a21 * r2, l2 = a02 * r0 + a12 * r1 + a22 * r2
-      const a = Math.asin(Math.max(-1, Math.min(1, l2))), b = Math.atan2(-l0, l1)
-      this.rx[i] = a / DEG; this.rz[i] = b / DEG
-      const sa = Math.sin(a), ca = Math.cos(a), sb = Math.sin(b), cb = Math.cos(b)
-      const m00 = cb, m10 = sb, m20 = 0, m01 = -ca * sb, m11 = ca * cb, m21 = sa, m02 = sa * sb, m12 = -sa * cb, m22 = ca
+      const sa = Math.sin(oa[i]), ca = Math.cos(oa[i]), sb = Math.sin(ob[i]), cb = Math.cos(ob[i])
+      const dxm = sb * ca, dym = cb * ca, dzm = sa
+      const drx = dxm, dry = ct * dym + st * dzm, drz = -st * dym + ct * dzm
+      const lx0 = a00 * drx + a10 * dry + a20 * drz, ly0 = a01 * drx + a11 * dry + a21 * drz, lz0 = a02 * drx + a12 * dry + a22 * drz
+      const ra = Math.asin(cclamp(lz0, -1, 1)), rb = Math.atan2(-lx0, ly0)
+      this.rx[i] = ra * 180 / Math.PI; this.rz[i] = rb * 180 / Math.PI
+      const sra = Math.sin(ra), cra = Math.cos(ra), srb = Math.sin(rb), crb = Math.cos(rb)
+      const m00 = crb, m10 = srb, m20 = 0, m01 = -cra * srb, m11 = cra * crb, m21 = sra, m02 = sra * srb, m12 = -sra * crb, m22 = cra
       const n00 = a00 * m00 + a01 * m10 + a02 * m20, n01 = a00 * m01 + a01 * m11 + a02 * m21, n02 = a00 * m02 + a01 * m12 + a02 * m22
       const n10 = a10 * m00 + a11 * m10 + a12 * m20, n11 = a10 * m01 + a11 * m11 + a12 * m21, n12 = a10 * m02 + a11 * m12 + a12 * m22
       const n20 = a20 * m00 + a21 * m10 + a22 * m20, n21 = a20 * m01 + a21 * m11 + a22 * m21, n22 = a20 * m02 + a21 * m12 + a22 * m22
@@ -416,15 +451,17 @@ export function buildCosmetic(THREE, json, texture, opts = {}) {
       const f = sim.yaw * DEG
       sim.x += -Math.sin(f) * m.speed * dt; sim.z += Math.cos(f) * m.speed * dt
       sim.speed += (m.speed - sim.speed) * Math.min(1, dt * 10)
-      chain.step(dt, sim.x, 64, sim.z, sim.yaw, 0, m.sneak, 0, t)
+      chain.step(dt, sim.x, 64, sim.z, sim.yaw, 0, 0, 0, t)   // the launcher skin never crouches
       const cp = capeParams
-      const flutter = (0.9 + 1.0 * Math.min(sim.speed, 6) + 0.4 * Math.min(Math.abs(s.vy || 0), 6)) * (cp ? cp.flutter : 1) + (cp ? cp.billow : 0)
+      const cf = cp ? cp.flutter : 1, bill = cp ? cp.billow : 0
+      const flutter = Math.min(3.5, (0.5 + 0.25 * Math.min(sim.speed, 6) + 0.08 * Math.min(Math.abs(s.vy || 0), 6)) * cf + bill * 0.5)
       const cs = cp ? cp.waveSpeed : 1, cw = cp ? cp.wavelength : 1
       const cnn = Math.min(capeN, 12), cn = Math.max(1, cnn - 1)
       for (let i = 0; i < cnn; i++) {
         const k = i / cn
-        capeRx[i] = chain.rx[i] + flutter * Math.sin(t * 5.2 * cs - i * 0.95 * cw) * (0.2 + 0.8 * k) * 0.9
-        capeRz[i] = chain.rz[i] + flutter * Math.sin(t * 3.1 * cs - i * 0.8 * cw + 1.3) * (0.2 + 0.8 * k) * 0.5
+        // pitch ripple only pushes outwards (never into the body), roll ripple is tiny
+        capeRx[i] = chain.rx[i] + flutter * (0.5 + 0.5 * Math.sin(t * 5.2 * cs - i * 0.95 * cw)) * (0.2 + 0.8 * k) * 0.8
+        capeRz[i] = chain.rz[i] + flutter * Math.sin(t * 3.1 * cs - i * 0.8 * cw + 1.3) * (0.2 + 0.8 * k) * 0.35
       }
     }
     for (const { p, outer, fxn, mat, alpha0 } of nodes) {
