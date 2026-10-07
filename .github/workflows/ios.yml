@@ -1,0 +1,164 @@
+name: iOS build (VanillaTurkey Mobile)
+
+# Builds the unsigned iPhone app (plans/IOS.md): ios/amethyst = Amethyst-iOS fork + VanillaTurkey web UI.
+# Output: net.vanillaturkey.mobile-<ver>-ios.ipa (AltStore / SideStore / any sideloader) and ...-ios-trollstore.tipa (TrollStore),
+# plus apps.json (AltStore source). Tag ios-v<ver> (or run manually with "publish") also creates a GitHub release.
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "App version (x.y.z); empty = ios/version.txt"
+        required: false
+        default: ""
+      publish:
+        description: "Create / update the GitHub release ios-v<version>"
+        type: boolean
+        default: false
+  push:
+    tags: ["ios-v*"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ios-build
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build unsigned IPA + TIPA
+    runs-on: macos-15
+    timeout-minutes: 120
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Resolve version
+        id: ver
+        shell: bash
+        run: |
+          set -euo pipefail
+          V="${{ github.event.inputs.version }}"
+          if [ -z "$V" ] && [ "${GITHUB_REF_TYPE}" = "tag" ]; then V="${GITHUB_REF_NAME#ios-v}"; fi
+          if [ -z "$V" ]; then V="$(tr -d '[:space:]' < ios/version.txt)"; fi
+          echo "version=$V" >> "$GITHUB_OUTPUT"
+          echo "Building VanillaTurkey Mobile iOS $V"
+
+      # ---- web UI (same React launcher UI as Android, built for WKWebView) ----
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Build launcher UI (VT_PLATFORM=ios)
+        shell: bash
+        run: |
+          set -euo pipefail
+          # launcher/src is imported by mobile/ui; its dependencies (livekit-client, three, lucide-react) resolve from launcher/node_modules
+          (cd launcher && npm ci --ignore-scripts --no-audit --no-fund)
+          (cd mobile/ui && npm ci --no-audit --no-fund)
+          echo '{ "version": "${{ steps.ver.outputs.version }}", "versionCode": 1 }' > mobile/ui/app-version.json
+          (cd mobile/ui && VT_PLATFORM=ios npm run build)
+          test -f ios/amethyst/Natives/resources/vtui/index.html
+
+      # ---- native app (follows Amethyst-iOS' own Makefile / development.yml) ----
+      - name: Setup Java 8 (boot JDK for JavaApp)
+        uses: actions/setup-java@v4
+        with:
+          distribution: zulu
+          java-version: "8"
+
+      - name: Install build tools
+        shell: bash
+        run: |
+          set -euo pipefail
+          brew update >/dev/null
+          brew install ldid make cmake || true
+          echo "/opt/homebrew/bin" >> "$GITHUB_PATH"
+          which gmake ldid cmake
+          xcodebuild -version
+
+      - name: Fetch Amethyst submodules (pinned)
+        run: bash ios/tools/fetch-submodules.sh
+
+      - name: Check JRE downloads are reachable
+        shell: bash
+        run: |
+          set -euo pipefail
+          for v in 8 17 21 25; do
+            curl -sfI "https://assets.angelauramc.dev/openjdk/ios-arm64/jre${v}-ios-aarch64.zip" >/dev/null && echo "jre${v} ok"
+          done
+
+      - name: Build IPA and TIPA
+        working-directory: ios/amethyst
+        shell: bash
+        run: |
+          set -euo pipefail
+          export PATH=/opt/homebrew/bin:$PATH
+          V="${{ steps.ver.outputs.version }}"
+          JOBS="$(sysctl -n hw.ncpu)"
+          # regular IPA (AltStore / SideStore / sideloaders)
+          gmake -j"$JOBS" dsym package PLATFORM=2 VERSION="$V" RELEASE=1 BOOTJDK="$JAVA_HOME/bin"
+          # TrollStore build (JIT entitlement), same recipe as upstream's development.yml
+          gmake -j"$JOBS" dsym package PLATFORM=2 VERSION="$V" RELEASE=1 BOOTJDK="$JAVA_HOME/bin" TROLLSTORE_JIT_ENT=1
+          ls -lah artifacts
+
+      - name: Sanity check the package
+        working-directory: ios/amethyst/artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          IPA="$(ls net.vanillaturkey.mobile-*-ios.ipa)"
+          unzip -l "$IPA" | grep -q "vtui/index.html"
+          unzip -l "$IPA" | grep -q "java_runtimes/java-21-openjdk"
+          rm -rf /tmp/vtcheck && mkdir /tmp/vtcheck && unzip -q "$IPA" 'Payload/*/Info.plist' -d /tmp/vtcheck
+          plutil -p /tmp/vtcheck/Payload/*/Info.plist | grep -E "CFBundleIdentifier|CFBundleDisplayName|CFBundleShortVersionString"
+
+      - name: Rename artifacts
+        working-directory: ios/amethyst/artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          V="${{ steps.ver.outputs.version }}"
+          mkdir -p ../../dist
+          cp "net.vanillaturkey.mobile-${V}-ios.ipa" "../../dist/VanillaTurkey-${V}.ipa"
+          cp "net.vanillaturkey.mobile-${V}-ios-trollstore.tipa" "../../dist/VanillaTurkey-${V}-trollstore.tipa"
+          ls -lah ../../dist
+
+      - name: Write AltStore source (apps.json)
+        shell: bash
+        run: |
+          set -euo pipefail
+          V="${{ steps.ver.outputs.version }}"
+          python3 ios/tools/make_apps_json.py \
+            --version "$V" \
+            --ipa "ios/dist/VanillaTurkey-${V}.ipa" \
+            --url "https://github.com/${{ github.repository }}/releases/download/ios-v${V}/VanillaTurkey-${V}.ipa" \
+            --out ios/dist/apps.json
+          cat ios/dist/apps.json
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: VanillaTurkey-iOS-${{ steps.ver.outputs.version }}
+          path: |
+            ios/dist/*.ipa
+            ios/dist/*.tipa
+            ios/dist/apps.json
+            ios/amethyst/artifacts/AngelAuraAmethyst.dSYM
+          if-no-files-found: error
+
+      - name: GitHub release
+        if: startsWith(github.ref, 'refs/tags/ios-v') || github.event.inputs.publish == 'true'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ios-v${{ steps.ver.outputs.version }}
+          name: VanillaTurkey iPhone ${{ steps.ver.outputs.version }}
+          body: |
+            VanillaTurkey Mobile for iPhone (unofficial modified Amethyst-iOS, GPL-3.0).
+            Install with AltStore / SideStore (`.ipa`) or TrollStore (`.tipa`). JIT is required (StikDebug / SideStore / TrollStore). See the website, iPhone section.
+          files: |
+            ios/dist/VanillaTurkey-${{ steps.ver.outputs.version }}.ipa
+            ios/dist/VanillaTurkey-${{ steps.ver.outputs.version }}-trollstore.tipa
+            ios/dist/apps.json

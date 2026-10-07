@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "ES2022", "lib": ["ES2022", "DOM", "DOM.Iterable"], "module": "ESNext",
+    "moduleResolution": "Bundler", "jsx": "react-jsx", "strict": true, "skipLibCheck": true,
+    "noEmit": true, "esModuleInterop": true, "resolveJsonModule": true, "types": ["vite/client"],
+    "paths": { "@launcher/*": ["../../launcher/src/*"] }
+  },
+  "include": ["src", "../../launcher/src/vt.d.ts", "../../launcher/src/env.d.ts"]
+}

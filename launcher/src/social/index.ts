@@ -1,0 +1,16 @@
+// Self-contained social UI (Ses Odaları, chat, DMs, voice, notifications). Host supplies a SocialAdapter.
+// Launcher: ./adapters/electron.ts. Mobile PWA: write a web adapter (fetch + localStorage) and mount <SocialRoot/>.
+export { SocialClient } from './client'
+export type { SocialState, LiveEvent } from './client'
+export * from './types'
+export { SocialCtx, useSocial, useSocialClient, Head, useHead, getSocial, setCurrentSocial } from './react'
+export { SocialWindow } from './SocialWindow'
+export { ToastStack, VoiceDock } from './Toasts'
+export { VoiceSettings } from './VoiceSettings'
+export { invalidateHead, loadHead, onSkinChange, placeholderHead, setSkinLoader } from './heads'
+export { useSocialMaybe } from './react'
+export { createElectronAdapter } from './adapters/electron'
+export * from './keys'
+export { RoleName, RoleChip, useRole, roleColor, ROLE_COLORS, ROLE_LIST } from './roles'
+export { setQuiet } from './sounds'
+import './social.css'

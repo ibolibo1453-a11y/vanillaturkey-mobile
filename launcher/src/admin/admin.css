@@ -1,0 +1,96 @@
+/* "Yönetim" admin panel (shared launcher + PWA). Scoped under .vta; uses glass tokens only. */
+.vta { height: 100%; display: flex; flex-direction: column; gap: 14px; min-height: 0; color: var(--t1); }
+.vta-head { display: flex; align-items: center; gap: 12px; }
+.vta-head h1 { font-size: 24px; font-weight: 750; letter-spacing: -.02em; display: flex; align-items: center; gap: 10px; }
+.vta-role { padding: 3px 11px; border-radius: 999px; font-size: 11.5px; font-weight: 750; letter-spacing: .06em; color: var(--rc, #fff); background: rgba(20,28,40,.45); border: 1px solid var(--rc, #fff); }
+.vta-body { flex: 1; min-height: 0; display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 16px; }
+.vta-nav { display: flex; flex-direction: column; gap: 4px; padding: 10px; border-radius: 20px; background: var(--tint), var(--g); border: 1px solid var(--gb); box-shadow: var(--hl), var(--shadow); align-self: start; }
+.vta-nav button { height: 38px; padding: 0 14px; border-radius: 12px; text-align: left; font-weight: 600; font-size: 13.5px; color: var(--t2); transition: background .15s, color .15s; }
+.vta-nav button:hover { color: #fff; background: rgba(255,255,255,.1); } .vta-nav button.on { background: rgba(255,255,255,.26); color: #fff; box-shadow: var(--hl); }
+.vta-main { min-height: 0; max-height: 100%; align-self: start; overflow-y: auto; padding: 20px 22px; border-radius: 22px; background: var(--tint), var(--g); border: 1px solid var(--gb); box-shadow: var(--hl), var(--shadow); backdrop-filter: var(--blur); }
+/* R5 QA: ONE glass level (the panel); sections' cards inside it are flat nested cards, never glass-in-glass */
+.vta-sec { display: flex; flex-direction: column; gap: 14px; }
+.vta-sechead { display: flex; align-items: flex-end; justify-content: space-between; gap: 14px; }
+.vta-sechead h2 { font-size: 20px; font-weight: 720; } .vta-sechead p { color: var(--t2); font-size: 13px; margin-top: 3px; }
+.vta-card { padding: 18px; border-radius: 16px; background: var(--gn); border: 1px solid var(--gbn); box-shadow: inset 0 1px 0 rgba(255,255,255,.18); }
+.vta-srv { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 18px; }
+.vta-img { position: relative; align-self: start; aspect-ratio: 16 / 10; border-radius: 14px; overflow: hidden; background: rgba(255,255,255,.1); border: 1px dashed rgba(255,255,255,.4); display: grid; place-items: center; color: var(--t2); }
+.vta-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.vta-img em { position: absolute; left: 0; right: 0; bottom: 0; padding: 7px; font-style: normal; font-size: 12px; font-weight: 650; display: flex; gap: 6px; align-items: center; justify-content: center; background: rgba(8,16,30,.6); opacity: 0; transition: opacity .2s; }
+.vta-img:hover em { opacity: 1; }
+.vta-form { display: flex; flex-direction: column; gap: 11px; min-width: 0; }
+.vta-form label { display: flex; flex-direction: column; gap: 5px; font-size: 11.5px; font-weight: 600; color: var(--t3); letter-spacing: .02em; }
+.vta-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; }
+.vta input[type=text], .vta input[type=number], .vta input[type=search], .vta input[type=password], .vta input:not([type]), .vta textarea, .vta-sel, .vta-search { width: 100%; background: rgba(255,255,255,.12); border: 1px solid var(--gbn); border-radius: 12px; padding: 0 12px; height: 38px; color: #fff; outline: 0; font-size: 13.5px; user-select: text; }
+.vta textarea { height: auto; padding: 9px 12px; resize: vertical; line-height: 1.45; }
+.vta input:focus, .vta textarea:focus, .vta-sel:focus { border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(46,197,245,.25); }
+.vta input::placeholder, .vta textarea::placeholder { color: var(--t3); }
+.vta-sel { width: auto; min-width: 160px; } .vta-sel option { color: #111; }
+.vta-line { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.vta-line.end { justify-content: flex-end; padding-top: 4px; } .vta-line.end .vta-dim { margin-right: auto; }
+.vta-line.tok code { flex: 1; min-width: 120px; font-size: 12px; padding: 7px 10px; border-radius: 10px; background: rgba(0,0,0,.28); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; user-select: text; }
+.vta-sw { flex-direction: row !important; align-items: center; gap: 8px !important; font-size: 13px !important; color: var(--t1) !important; cursor: pointer; }
+.vta-sw input, .vta input[type=checkbox] { width: 16px; height: 16px; accent-color: #2ec5f5; }
+.vta-dim { color: var(--t3); font-size: 12.5px; }
+.vta-btn { height: 32px; padding: 0 12px; border-radius: 999px; background: rgba(255,255,255,.14); border: 1px solid var(--gbn); font-size: 12.5px; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; transition: background .15s; }
+.vta-btn:hover { background: rgba(255,255,255,.24); } .vta-btn.danger { color: #ffb3bd; } .vta-btn.danger:hover { background: rgba(255,90,110,.28); }
+.vta-save { height: 36px !important; padding: 0 22px !important; }
+.vta-add { display: flex; gap: 10px; } .vta-add input { flex: 1; }
+.vta-addbtn { height: 38px !important; padding: 0 18px !important; font-size: 13.5px !important; }
+.vta-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.vta-chip { display: inline-flex; align-items: center; gap: 8px; padding: 4px 6px 4px 5px; border-radius: 999px; background: rgba(255,255,255,.14); border: 1px solid var(--gbn); font-size: 13px; font-weight: 600; }
+.vta-chip button { width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; color: var(--t2); } .vta-chip button:hover { background: rgba(255,90,110,.45); color: #fff; }
+.vta-msg { padding: 9px 14px; border-radius: 12px; font-size: 13px; background: rgba(61,220,132,.2); border: 1px solid rgba(61,220,132,.55); } .vta-msg.bad { background: rgba(255,90,110,.22); border-color: rgba(255,90,110,.6); }
+.vta-empty { color: var(--t2); font-size: 13.5px; padding: 8px 2px; }
+@media (max-width: 760px) {
+  .vta-body { grid-template-columns: 1fr; gap: 10px; }
+  .vta-nav { flex-direction: row; overflow-x: auto; padding: 6px; } .vta-nav button { white-space: nowrap; }
+  .vta-srv { grid-template-columns: 1fr; } .vta-2 { grid-template-columns: 1fr; }
+}
+
+/* R5-E: custom capes section */
+.vta-capes { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+.vta-cape { display: flex; gap: 12px; padding: 10px; border-radius: 14px; background: rgba(255,255,255,.08); border: 1px solid var(--gbn); }
+.vta-cape-th { flex: none; width: 50px; height: 90px; border-radius: 6px; background-color: rgba(0,0,0,.25); background-position: top left; background-repeat: no-repeat; image-rendering: pixelated; }
+.vta-cape-meta { min-width: 0; display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.vta-cape-rm { height: 30px; padding: 0 14px; font-size: 13px; align-self: flex-start; margin-top: auto; }
+
+/* R5-B: roles section */
+.vta-legend { display: flex; flex-wrap: wrap; gap: 8px; }
+.vta-rolepill { display: inline-flex; align-items: center; padding: 2px 10px; border-radius: 999px; font-size: 11px; font-weight: 800; letter-spacing: .06em; color: var(--rc, #fff); background: color-mix(in srgb, var(--rc, #fff) 18%, transparent); border: 1px solid color-mix(in srgb, var(--rc, #fff) 60%, transparent); }
+.vta-find { display: flex; align-items: center; gap: 8px; color: var(--t3); margin-bottom: 10px; } .vta-find input { flex: 1; }
+.vta-rolelist { display: flex; flex-direction: column; gap: 8px; }
+.vta-rolerow { display: flex; align-items: center; gap: 10px; padding: 7px 10px; border-radius: 14px; background: rgba(255,255,255,.08); border: 1px solid var(--gbn); } .vta-rolerow b { font-weight: 650; } .vta-rolerow .vta-sel, .vta-rolerow .vta-btn, .vta-rolerow .vta-dim { margin-left: auto; }
+.vta-h3 { font-size: 14px; font-weight: 700; color: var(--t2); margin-top: 6px; }
+
+.vta-tabs { display: flex; gap: 6px; } .vta-tabs button { height: 34px; padding: 0 16px; border-radius: 999px; font-weight: 650; font-size: 13px; color: var(--t2); background: rgba(255,255,255,.08); border: 1px solid var(--gbn); } .vta-tabs button.on { color: #fff; background: rgba(255,255,255,.26); }
+.vta-roledef { display: flex; flex-direction: column; gap: 12px; }
+.vta-perms { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px 14px; }
+.vta input[type=color].vta-color, .vta-color { width: 44px; height: 36px; padding: 2px; border-radius: 10px; border: 1px solid var(--gbn); background: rgba(255,255,255,.12); cursor: pointer; }
+
+/* R5-A+ users / content / config / audit */
+.vta-h3 { font-size: 15px; font-weight: 700; display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+.vta-card + .vta-card { margin-top: 0; }
+.vta-num { width: 70px !important; text-align: center; }
+.vta-users { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 14px; align-items: start; }
+.vta-ulist { display: flex; flex-direction: column; gap: 4px; max-height: 420px; overflow-y: auto; }
+.vta-urow { display: flex; align-items: center; gap: 8px; padding: 8px 10px; border-radius: 12px; text-align: left; background: rgba(255,255,255,.08); font-size: 13px; }
+.vta-urow:hover { background: rgba(255,255,255,.16); } .vta-urow.on { background: rgba(255,255,255,.26); }
+.vta-urow i { width: 8px; height: 8px; border-radius: 50%; background: var(--t3); flex-shrink: 0; } .vta-urow i.on { background: var(--ok); box-shadow: 0 0 8px var(--ok); }
+.vta-urow em { font-style: normal; font-size: 10.5px; font-weight: 700; opacity: .8; } .vta-urow .bad, .vta-prof .bad { color: var(--err); } .vta-urow .warn, .vta-prof .warn { color: var(--warn); } .vta-urow span { font-size: 11px; }
+.vta-prof h3 { font-size: 18px; font-weight: 720; margin-bottom: 8px; } .vta-tagrole { font-style: normal; font-size: 11px; opacity: .85; margin-left: 6px; }
+.vta-prof dl { display: grid; grid-template-columns: 150px 1fr; gap: 6px 12px; font-size: 13px; margin: 8px 0 14px; } .vta-prof dt { color: var(--t3); } .vta-prof dd { margin: 0; }
+.vta-prof .vta-line { margin-bottom: 8px; }
+.vta-rows { display: flex; flex-direction: column; gap: 6px; margin-top: 10px; }
+.vta-r { display: flex; align-items: center; gap: 10px; padding: 7px 10px; border-radius: 12px; background: rgba(255,255,255,.08); font-size: 13px; } .vta-r .grow { flex: 1; min-width: 0; overflow-wrap: anywhere; } .vta-r.wrap { flex-wrap: wrap; }
+.vta-kind { font-size: 10.5px; font-weight: 750; padding: 2px 8px; border-radius: 999px; background: rgba(46,197,245,.35); } .vta-kind.warn { background: rgba(255,194,77,.45); }
+.vta-audit { padding: 8px; max-height: 470px; overflow-y: auto; }
+.vta-arow { display: grid; grid-template-columns: 150px 100px 130px 110px 1fr; gap: 8px; padding: 6px 8px; font-size: 12px; border-bottom: 1px solid rgba(255,255,255,.08); } .vta-arow .t { color: var(--t3); } .vta-arow em { font-style: normal; color: var(--t2); overflow-wrap: anywhere; }
+.vta-nav { max-height: 100%; overflow-y: auto; }
+@media (max-width: 760px) { .vta-users { grid-template-columns: 1fr; } .vta-arow { grid-template-columns: 1fr 1fr; } .vta-prof dl { grid-template-columns: 110px 1fr; } }
+
+/* R5 QA: the colour picker of "Roller" stretched across the whole row inside .vta-add (flex: 1 on every input) */
+.vta input[type=color], .vta .vta-add input[type=color] { flex: 0 0 52px !important; width: 52px !important; min-width: 52px; padding: 2px; }
+
+/* R6: live preview of the compact sponsor card inside the server editor */
+.vta-preview { display: flex; flex-direction: column; gap: 6px; } .vta-pv { width: 322px; max-width: 100%; height: 126px; display: flex; } .vta-pv .sp-card { pointer-events: none; }

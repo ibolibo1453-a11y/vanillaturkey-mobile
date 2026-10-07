@@ -1,0 +1,3562 @@
+{
+ "version": 2,
+ "rarities": [
+  {
+   "id": "common",
+   "nameTr": "Sıradan",
+   "color": "#8A9BB8"
+  },
+  {
+   "id": "rare",
+   "nameTr": "Nadir",
+   "color": "#2F8CFF"
+  },
+  {
+   "id": "epic",
+   "nameTr": "Epik",
+   "color": "#B070FF"
+  },
+  {
+   "id": "legendary",
+   "nameTr": "Efsanevi",
+   "color": "#FFC24D"
+  }
+ ],
+ "slots": [
+  {
+   "id": "hat",
+   "nameTr": "Şapka",
+   "color": "#6FD3FF"
+  },
+  {
+   "id": "mask",
+   "nameTr": "Maske",
+   "color": "#FF5470"
+  },
+  {
+   "id": "body",
+   "nameTr": "Gövde",
+   "color": "#FFC24D"
+  },
+  {
+   "id": "cape",
+   "nameTr": "Pelerin",
+   "color": "#2F8CFF"
+  },
+  {
+   "id": "wings",
+   "nameTr": "Kanat",
+   "color": "#B66CFF"
+  },
+  {
+   "id": "pet",
+   "nameTr": "Evcil Hayvan",
+   "color": "#3DDC84"
+  },
+  {
+   "id": "aura",
+   "nameTr": "Aura",
+   "color": "#FFFFFF"
+  },
+  {
+   "id": "hit",
+   "nameTr": "Vuruş efekti",
+   "color": "#FF8A3D"
+  }
+ ],
+ "items": [
+  {
+   "id": "hat_crown_gold",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Altın Taç",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_crown_gold.png"
+  },
+  {
+   "id": "hat_crown_silver",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Gümüş Taç",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_crown_silver.png"
+  },
+  {
+   "id": "hat_crown_ruby",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Yakut Taç",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/hat_crown_ruby.png"
+  },
+  {
+   "id": "hat_crown_emerald",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Zümrüt Taç",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/hat_crown_emerald.png"
+  },
+  {
+   "id": "hat_crown_sapphire",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Safir Taç",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/hat_crown_sapphire.png"
+  },
+  {
+   "id": "hat_crown_ice",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Buz Tacı",
+   "rarity": "legendary",
+   "price": 400,
+   "icon": "build/icons/hat_crown_ice.png"
+  },
+  {
+   "id": "hat_crown_obsidian",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Obsidyen Taç",
+   "rarity": "legendary",
+   "price": 400,
+   "icon": "build/icons/hat_crown_obsidian.png"
+  },
+  {
+   "id": "hat_crown_blue",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "VanillaTurkey Tacı",
+   "rarity": "legendary",
+   "price": 400,
+   "icon": "build/icons/hat_crown_blue.png"
+  },
+  {
+   "id": "hat_ay_yildiz",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Ay Yıldız Tacı",
+   "rarity": "legendary",
+   "price": 400,
+   "icon": "build/icons/hat_ay_yildiz.png"
+  },
+  {
+   "id": "hat_wizard_purple",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Mor Büyücü Şapkası",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_wizard_purple.png"
+  },
+  {
+   "id": "hat_wizard_blue",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Mavi Büyücü Şapkası",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_wizard_blue.png"
+  },
+  {
+   "id": "hat_wizard_red",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Kızıl Büyücü Şapkası",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_wizard_red.png"
+  },
+  {
+   "id": "hat_wizard_green",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Yeşil Büyücü Şapkası",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_wizard_green.png"
+  },
+  {
+   "id": "hat_wizard_black",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Kara Büyücü Şapkası",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/hat_wizard_black.png"
+  },
+  {
+   "id": "hat_wizard_white",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Beyaz Büyücü Şapkası",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/hat_wizard_white.png"
+  },
+  {
+   "id": "hat_halo_gold",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Altın Hale",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/hat_halo_gold.png"
+  },
+  {
+   "id": "hat_halo_white",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Beyaz Hale",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/hat_halo_white.png"
+  },
+  {
+   "id": "hat_halo_blue",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Mavi Hale",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/hat_halo_blue.png"
+  },
+  {
+   "id": "hat_halo_red",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Kızıl Hale",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/hat_halo_red.png"
+  },
+  {
+   "id": "hat_halo_green",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Zümrüt Hale",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/hat_halo_green.png"
+  },
+  {
+   "id": "hat_halo_purple",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Mor Hale",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/hat_halo_purple.png"
+  },
+  {
+   "id": "hat_horns_devil",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Şeytan Boynuzları",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/hat_horns_devil.png"
+  },
+  {
+   "id": "hat_horns_black",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Kara Boynuzlar",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/hat_horns_black.png"
+  },
+  {
+   "id": "hat_horns_gold",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Altın Boynuzlar",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/hat_horns_gold.png"
+  },
+  {
+   "id": "hat_horns_ram",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Koç Boynuzları",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/hat_horns_ram.png"
+  },
+  {
+   "id": "hat_horns_dragon",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Ejderha Boynuzları",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/hat_horns_dragon.png"
+  },
+  {
+   "id": "hat_horns_ice",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Buz Boynuzları",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/hat_horns_ice.png"
+  },
+  {
+   "id": "hat_unicorn",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Tek Boynuz",
+   "rarity": "legendary",
+   "price": 400,
+   "icon": "build/icons/hat_unicorn.png"
+  },
+  {
+   "id": "hat_antlers",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Geyik Boynuzu",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_antlers.png"
+  },
+  {
+   "id": "hat_ears_cat_black",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Kara Kedi Kulakları",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_ears_cat_black.png"
+  },
+  {
+   "id": "hat_ears_cat_white",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Beyaz Kedi Kulakları",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_ears_cat_white.png"
+  },
+  {
+   "id": "hat_ears_cat_orange",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Turuncu Kedi Kulakları",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_ears_cat_orange.png"
+  },
+  {
+   "id": "hat_ears_bunny",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Tavşan Kulakları",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_ears_bunny.png"
+  },
+  {
+   "id": "hat_ears_bear",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Ayı Kulakları",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/hat_ears_bear.png"
+  },
+  {
+   "id": "hat_ears_wolf",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Kurt Kulakları",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_ears_wolf.png"
+  },
+  {
+   "id": "hat_ears_fox",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Tilki Kulakları",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_ears_fox.png"
+  },
+  {
+   "id": "hat_ears_mouse",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Fare Kulakları",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/hat_ears_mouse.png"
+  },
+  {
+   "id": "hat_top_black",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Silindir Şapka",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/hat_top_black.png"
+  },
+  {
+   "id": "hat_top_white",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Beyaz Silindir",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/hat_top_white.png"
+  },
+  {
+   "id": "hat_top_blue",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Mavi Silindir",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_top_blue.png"
+  },
+  {
+   "id": "hat_top_gold",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Altın Silindir",
+   "rarity": "legendary",
+   "price": 400,
+   "icon": "build/icons/hat_top_gold.png"
+  },
+  {
+   "id": "hat_top_magic",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Sihirbaz Silindiri",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/hat_top_magic.png"
+  },
+  {
+   "id": "hat_bowler",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Melon Şapka",
+   "rarity": "common",
+   "price": 0,
+   "icon": "build/icons/hat_bowler.png"
+  },
+  {
+   "id": "hat_fedora_brown",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Kahverengi Fötr",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/hat_fedora_brown.png"
+  },
+  {
+   "id": "hat_fedora_black",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Kara Fötr",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_fedora_black.png"
+  },
+  {
+   "id": "hat_fedora_white",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Beyaz Fötr",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_fedora_white.png"
+  },
+  {
+   "id": "hat_cowboy_brown",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Kovboy Şapkası",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/hat_cowboy_brown.png"
+  },
+  {
+   "id": "hat_cowboy_white",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Beyaz Kovboy Şapkası",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/hat_cowboy_white.png"
+  },
+  {
+   "id": "hat_cowboy_black",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Kara Kovboy Şapkası",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/hat_cowboy_black.png"
+  },
+  {
+   "id": "hat_sombrero",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Sombrero",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_sombrero.png"
+  },
+  {
+   "id": "hat_party_blue",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Parti Şapkası",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/hat_party_blue.png"
+  },
+  {
+   "id": "hat_party_pink",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Pembe Parti Şapkası",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/hat_party_pink.png"
+  },
+  {
+   "id": "hat_santa",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Noel Baba Şapkası",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/hat_santa.png"
+  },
+  {
+   "id": "hat_beanie_blue",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Mavi Bere",
+   "rarity": "common",
+   "price": 0,
+   "icon": "build/icons/hat_beanie_blue.png"
+  },
+  {
+   "id": "hat_beanie_red",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Kırmızı Bere",
+   "rarity": "common",
+   "price": 0,
+   "icon": "build/icons/hat_beanie_red.png"
+  },
+  {
+   "id": "hat_beanie_gray",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Gri Bere",
+   "rarity": "common",
+   "price": 0,
+   "icon": "build/icons/hat_beanie_gray.png"
+  },
+  {
+   "id": "hat_beanie_tr",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Türk Bayrağı Bere",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_beanie_tr.png"
+  },
+  {
+   "id": "hat_cap_blue",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Mavi Kep",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/hat_cap_blue.png"
+  },
+  {
+   "id": "hat_cap_red",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Kırmızı Kep",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/hat_cap_red.png"
+  },
+  {
+   "id": "hat_cap_black",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Kara Kep",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/hat_cap_black.png"
+  },
+  {
+   "id": "hat_chef",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Aşçı Şapkası",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_chef.png"
+  },
+  {
+   "id": "hat_pirate",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Korsan Şapkası",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/hat_pirate.png"
+  },
+  {
+   "id": "hat_captain",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Kaptan Şapkası",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_captain.png"
+  },
+  {
+   "id": "hat_police",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Polis Şapkası",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_police.png"
+  },
+  {
+   "id": "hat_graduation",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Mezuniyet Kepi",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_graduation.png"
+  },
+  {
+   "id": "hat_pilot",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Pilot Başlığı",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/hat_pilot.png"
+  },
+  {
+   "id": "hat_straw",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Hasır Şapka",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/hat_straw.png"
+  },
+  {
+   "id": "hat_fez",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Fes",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/hat_fez.png"
+  },
+  {
+   "id": "hat_kalpak",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Kalpak",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/hat_kalpak.png"
+  },
+  {
+   "id": "hat_beret_red",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Kırmızı Beret",
+   "rarity": "common",
+   "price": 0,
+   "icon": "build/icons/hat_beret_red.png"
+  },
+  {
+   "id": "hat_beret_black",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Kara Beret",
+   "rarity": "common",
+   "price": 0,
+   "icon": "build/icons/hat_beret_black.png"
+  },
+  {
+   "id": "hat_hardhat",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Baret",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/hat_hardhat.png"
+  },
+  {
+   "id": "hat_viking",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Viking Miğferi",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/hat_viking.png"
+  },
+  {
+   "id": "hat_knight",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Şövalye Miğferi",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/hat_knight.png"
+  },
+  {
+   "id": "hat_kabuto",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Samuray Kabuto",
+   "rarity": "legendary",
+   "price": 400,
+   "icon": "build/icons/hat_kabuto.png"
+  },
+  {
+   "id": "hat_spartan",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Spartalı Miğferi",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/hat_spartan.png"
+  },
+  {
+   "id": "hat_propeller",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Pervaneli Bere",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_propeller.png"
+  },
+  {
+   "id": "hat_pumpkin",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Balkabağı",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/hat_pumpkin.png"
+  },
+  {
+   "id": "hat_mushroom",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Mantar Şapka",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_mushroom.png"
+  },
+  {
+   "id": "hat_icecream",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Dondurma",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_icecream.png"
+  },
+  {
+   "id": "hat_cake",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Pasta",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/hat_cake.png"
+  },
+  {
+   "id": "hat_headphones_black",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Kulaklık",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/hat_headphones_black.png"
+  },
+  {
+   "id": "hat_headphones_blue",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Mavi Kulaklık",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_headphones_blue.png"
+  },
+  {
+   "id": "hat_headphones_pink",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Pembe Kulaklık",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_headphones_pink.png"
+  },
+  {
+   "id": "hat_flower_crown",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Çiçek Tacı",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_flower_crown.png"
+  },
+  {
+   "id": "hat_laurel",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Defne Çelengi",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/hat_laurel.png"
+  },
+  {
+   "id": "hat_tiara",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Elmas Tiara",
+   "rarity": "legendary",
+   "price": 400,
+   "icon": "build/icons/hat_tiara.png"
+  },
+  {
+   "id": "hat_ninja_band",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Ninja Bandı",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_ninja_band.png"
+  },
+  {
+   "id": "hat_cone",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Trafik Konisi",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/hat_cone.png"
+  },
+  {
+   "id": "hat_duck",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Lastik Ördek",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_duck.png"
+  },
+  {
+   "id": "hat_antenna",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Anten",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/hat_antenna.png"
+  },
+  {
+   "id": "hat_bozkurt",
+   "slot": "hat",
+   "slotTr": "Şapka",
+   "nameTr": "Bozkurt Başlığı",
+   "rarity": "legendary",
+   "price": 400,
+   "icon": "build/icons/hat_bozkurt.png"
+  },
+  {
+   "id": "mask_shades_black",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Siyah Güneş Gözlüğü",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/mask_shades_black.png"
+  },
+  {
+   "id": "mask_shades_red",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Kırmızı Gözlük",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/mask_shades_red.png"
+  },
+  {
+   "id": "mask_shades_blue",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Mavi Ayna Gözlük",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/mask_shades_blue.png"
+  },
+  {
+   "id": "mask_aviator",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Aviator Gözlük",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/mask_aviator.png"
+  },
+  {
+   "id": "mask_round",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Yuvarlak Gözlük",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/mask_round.png"
+  },
+  {
+   "id": "mask_nerd",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "İnek Gözlüğü",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/mask_nerd.png"
+  },
+  {
+   "id": "mask_neon",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Neon Gözlük",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/mask_neon.png"
+  },
+  {
+   "id": "mask_star",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Yıldız Gözlük",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/mask_star.png"
+  },
+  {
+   "id": "mask_ski",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Kayak Gözlüğü",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/mask_ski.png"
+  },
+  {
+   "id": "mask_deal_with_it",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Deal With It",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/mask_deal_with_it.png"
+  },
+  {
+   "id": "mask_heart_glasses",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Kalpli Gözlük",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/mask_heart_glasses.png"
+  },
+  {
+   "id": "mask_monocle",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Monokl",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/mask_monocle.png"
+  },
+  {
+   "id": "mask_3d",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "3D Gözlük",
+   "rarity": "common",
+   "price": 0,
+   "icon": "build/icons/mask_3d.png"
+  },
+  {
+   "id": "mask_steampunk",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Buhar Gözlüğü",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/mask_steampunk.png"
+  },
+  {
+   "id": "mask_cyber_visor",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Siber Vizör",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/mask_cyber_visor.png"
+  },
+  {
+   "id": "mask_vr",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "VR Başlık",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/mask_vr.png"
+  },
+  {
+   "id": "mask_scuba",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Dalış Maskesi",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/mask_scuba.png"
+  },
+  {
+   "id": "mask_ninja",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Ninja Maskesi",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/mask_ninja.png"
+  },
+  {
+   "id": "mask_hockey",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Hokey Maskesi",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/mask_hockey.png"
+  },
+  {
+   "id": "mask_surgical",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Cerrahi Maske",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/mask_surgical.png"
+  },
+  {
+   "id": "mask_bandana_red",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Kırmızı Bandana",
+   "rarity": "common",
+   "price": 0,
+   "icon": "build/icons/mask_bandana_red.png"
+  },
+  {
+   "id": "mask_bandana_blue",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Mavi Bandana",
+   "rarity": "common",
+   "price": 0,
+   "icon": "build/icons/mask_bandana_blue.png"
+  },
+  {
+   "id": "mask_bandana_tr",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Ay Yıldız Bandana",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/mask_bandana_tr.png"
+  },
+  {
+   "id": "mask_domino",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Domino Maskesi",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/mask_domino.png"
+  },
+  {
+   "id": "mask_venetian",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Venedik Maskesi",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/mask_venetian.png"
+  },
+  {
+   "id": "mask_anonymous",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Anonim Maskesi",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/mask_anonymous.png"
+  },
+  {
+   "id": "mask_oni",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Oni Maskesi",
+   "rarity": "legendary",
+   "price": 400,
+   "icon": "build/icons/mask_oni.png"
+  },
+  {
+   "id": "mask_skull",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Kuru Kafa Maskesi",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/mask_skull.png"
+  },
+  {
+   "id": "mask_clown",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Palyaço Maskesi",
+   "rarity": "common",
+   "price": 0,
+   "icon": "build/icons/mask_clown.png"
+  },
+  {
+   "id": "mask_cat_face",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Kedi Yüzü",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/mask_cat_face.png"
+  },
+  {
+   "id": "mask_vampire",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Vampir Dişleri",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/mask_vampire.png"
+  },
+  {
+   "id": "mask_robot",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Robot Yüzü",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/mask_robot.png"
+  },
+  {
+   "id": "mask_warpaint",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Savaş Boyası",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/mask_warpaint.png"
+  },
+  {
+   "id": "mask_blush",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Kızarma",
+   "rarity": "common",
+   "price": 0,
+   "icon": "build/icons/mask_blush.png"
+  },
+  {
+   "id": "mask_scar",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Savaş Yarası",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/mask_scar.png"
+  },
+  {
+   "id": "mask_tears",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Gözyaşları",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/mask_tears.png"
+  },
+  {
+   "id": "mask_mustache",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Bıyık",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/mask_mustache.png"
+  },
+  {
+   "id": "mask_santa_beard",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Noel Sakalı",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/mask_santa_beard.png"
+  },
+  {
+   "id": "mask_eyepatch",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Göz Bandı",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/mask_eyepatch.png"
+  },
+  {
+   "id": "mask_clown_nose",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Palyaço Burnu",
+   "rarity": "common",
+   "price": 0,
+   "icon": "build/icons/mask_clown_nose.png"
+  },
+  {
+   "id": "mask_plague",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Veba Doktoru",
+   "rarity": "legendary",
+   "price": 400,
+   "icon": "build/icons/mask_plague.png"
+  },
+  {
+   "id": "mask_gas",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Gaz Maskesi",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/mask_gas.png"
+  },
+  {
+   "id": "mask_laser_eyes",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Lazer Gözler",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/mask_laser_eyes.png"
+  },
+  {
+   "id": "mask_bunny",
+   "slot": "mask",
+   "slotTr": "Maske",
+   "nameTr": "Tavşan Yüzü",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/mask_bunny.png"
+  },
+  {
+   "id": "body_scarf_red",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Kırmızı Atkı",
+   "rarity": "common",
+   "price": 0,
+   "icon": "build/icons/body_scarf_red.png"
+  },
+  {
+   "id": "body_scarf_tr",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Türk Atkısı",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/body_scarf_tr.png"
+  },
+  {
+   "id": "body_scarf_blue",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Mavi Atkı",
+   "rarity": "common",
+   "price": 0,
+   "icon": "build/icons/body_scarf_blue.png"
+  },
+  {
+   "id": "body_scarf_rainbow",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Gökkuşağı Atkısı",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/body_scarf_rainbow.png"
+  },
+  {
+   "id": "body_scarf_black",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Kara Atkı",
+   "rarity": "common",
+   "price": 0,
+   "icon": "build/icons/body_scarf_black.png"
+  },
+  {
+   "id": "body_scarf_green",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Yeşil Atkı",
+   "rarity": "common",
+   "price": 0,
+   "icon": "build/icons/body_scarf_green.png"
+  },
+  {
+   "id": "body_pauldron_gold",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Altın Omuzluk",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/body_pauldron_gold.png"
+  },
+  {
+   "id": "body_pauldron_iron",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Demir Omuzluk",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/body_pauldron_iron.png"
+  },
+  {
+   "id": "body_pauldron_diamond",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Elmas Omuzluk",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/body_pauldron_diamond.png"
+  },
+  {
+   "id": "body_pauldron_obsidian",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Obsidyen Omuzluk",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/body_pauldron_obsidian.png"
+  },
+  {
+   "id": "body_pauldron_ice",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Buz Omuzluk",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/body_pauldron_ice.png"
+  },
+  {
+   "id": "body_pack_leather",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Deri Sırt Çantası",
+   "rarity": "common",
+   "price": 0,
+   "icon": "build/icons/body_pack_leather.png"
+  },
+  {
+   "id": "body_pack_jet",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Roket Çantası",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/body_pack_jet.png"
+  },
+  {
+   "id": "body_quiver",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Ok Kılıfı",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/body_quiver.png"
+  },
+  {
+   "id": "body_sword_back",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Sırttaki Kılıç",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/body_sword_back.png"
+  },
+  {
+   "id": "body_shield_back",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Sırttaki Kalkan",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/body_shield_back.png"
+  },
+  {
+   "id": "body_guitar",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Gitar",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/body_guitar.png"
+  },
+  {
+   "id": "body_battery",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Enerji Paketi",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/body_battery.png"
+  },
+  {
+   "id": "body_tail_fox",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Tilki Kuyruğu",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/body_tail_fox.png"
+  },
+  {
+   "id": "body_tail_cat",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Kedi Kuyruğu",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/body_tail_cat.png"
+  },
+  {
+   "id": "body_tail_dragon",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Ejderha Kuyruğu",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/body_tail_dragon.png"
+  },
+  {
+   "id": "body_tail_devil",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Şeytan Kuyruğu",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/body_tail_devil.png"
+  },
+  {
+   "id": "body_tail_wolf",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Kurt Kuyruğu",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/body_tail_wolf.png"
+  },
+  {
+   "id": "body_armor_knight",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Şövalye Zırhı",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/body_armor_knight.png"
+  },
+  {
+   "id": "body_armor_gold",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Altın Zırh",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/body_armor_gold.png"
+  },
+  {
+   "id": "body_armor_ice",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Buz Zırhı",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/body_armor_ice.png"
+  },
+  {
+   "id": "body_armor_obsidian",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Obsidyen Zırh",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/body_armor_obsidian.png"
+  },
+  {
+   "id": "body_armor_roman",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Roma Zırhı",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/body_armor_roman.png"
+  },
+  {
+   "id": "body_armor_lava",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Lav Zırhı",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/body_armor_lava.png"
+  },
+  {
+   "id": "body_armor_robot",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Robot Gövdesi",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/body_armor_robot.png"
+  },
+  {
+   "id": "body_armor_bone",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "İskelet Gövde",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/body_armor_bone.png"
+  },
+  {
+   "id": "body_vest_tux",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Smokin Yeleği",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/body_vest_tux.png"
+  },
+  {
+   "id": "body_tie_blue",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Mavi Kravat",
+   "rarity": "common",
+   "price": 0,
+   "icon": "build/icons/body_tie_blue.png"
+  },
+  {
+   "id": "body_reactor",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Ark Reaktörü",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/body_reactor.png"
+  },
+  {
+   "id": "body_medal",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Madalya",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/body_medal.png"
+  },
+  {
+   "id": "body_float_ring",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Can Simidi",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/body_float_ring.png"
+  },
+  {
+   "id": "body_belt",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Alet Kemeri",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/body_belt.png"
+  },
+  {
+   "id": "body_bandolier",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Fişeklik",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/body_bandolier.png"
+  },
+  {
+   "id": "body_lei",
+   "slot": "body",
+   "slotTr": "Gövde",
+   "nameTr": "Çiçek Kolyesi",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/body_lei.png"
+  },
+  {
+   "id": "imza",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "İmza",
+   "rarity": "legendary",
+   "price": 100,
+   "icon": "build/icons/imza.png"
+  },
+  {
+   "id": "renklerin",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Senin Renklerin",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/renklerin.png"
+  },
+  {
+   "id": "cape_vt",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "VanillaTurkey Pelerini",
+   "rarity": "legendary",
+   "price": 0,
+   "icon": "build/icons/cape_vt.png"
+  },
+  {
+   "id": "cape_vt_navy",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "VanillaTurkey Gece",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/cape_vt_navy.png"
+  },
+  {
+   "id": "cape_vt_ice",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "VanillaTurkey Buz",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/cape_vt_ice.png"
+  },
+  {
+   "id": "cape_vt_royal",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "VanillaTurkey Kraliyet",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/cape_vt_royal.png"
+  },
+  {
+   "id": "cape_vt_neon",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "VanillaTurkey Neon",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/cape_vt_neon.png"
+  },
+  {
+   "id": "cape_vt_stripes",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "VanillaTurkey Şerit",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/cape_vt_stripes.png"
+  },
+  {
+   "id": "cape_flag_tr",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Türk Bayrağı",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/cape_flag_tr.png"
+  },
+  {
+   "id": "cape_flag_az",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Azerbaycan Bayrağı",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/cape_flag_az.png"
+  },
+  {
+   "id": "cape_flag_de",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Almanya Bayrağı",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/cape_flag_de.png"
+  },
+  {
+   "id": "cape_flag_fr",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Fransa Bayrağı",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/cape_flag_fr.png"
+  },
+  {
+   "id": "cape_flag_it",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "İtalya Bayrağı",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/cape_flag_it.png"
+  },
+  {
+   "id": "cape_flag_nl",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Hollanda Bayrağı",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/cape_flag_nl.png"
+  },
+  {
+   "id": "cape_flag_br",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Brezilya Bayrağı",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/cape_flag_br.png"
+  },
+  {
+   "id": "cape_flag_jp",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Japonya Bayrağı",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/cape_flag_jp.png"
+  },
+  {
+   "id": "cape_flag_ar",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Arjantin Bayrağı",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/cape_flag_ar.png"
+  },
+  {
+   "id": "cape_flag_se",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "İsveç Bayrağı",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/cape_flag_se.png"
+  },
+  {
+   "id": "cape_flag_es",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "İspanya Bayrağı",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/cape_flag_es.png"
+  },
+  {
+   "id": "cape_flag_gb",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Birleşik Krallık Bayrağı",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/cape_flag_gb.png"
+  },
+  {
+   "id": "cape_fire",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Alev Pelerini",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/cape_fire.png"
+  },
+  {
+   "id": "cape_lava",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Lav Pelerini",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/cape_lava.png"
+  },
+  {
+   "id": "cape_ice",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Buz Pelerini",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/cape_ice.png"
+  },
+  {
+   "id": "cape_ocean",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Okyanus Pelerini",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/cape_ocean.png"
+  },
+  {
+   "id": "cape_electric",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Yıldırım Pelerini",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/cape_electric.png"
+  },
+  {
+   "id": "cape_rock",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Kaya Pelerini",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/cape_rock.png"
+  },
+  {
+   "id": "cape_clouds",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Bulut Pelerini",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/cape_clouds.png"
+  },
+  {
+   "id": "cape_nature",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Orman Pelerini",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/cape_nature.png"
+  },
+  {
+   "id": "cape_shadow",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Gölge Pelerini",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/cape_shadow.png"
+  },
+  {
+   "id": "cape_light",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Işık Pelerini",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/cape_light.png"
+  },
+  {
+   "id": "cape_galaxy",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Galaksi Pelerini",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/cape_galaxy.png"
+  },
+  {
+   "id": "cape_nebula",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Nebula Pelerini",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/cape_nebula.png"
+  },
+  {
+   "id": "cape_aurora",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Aurora Pelerini",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/cape_aurora.png"
+  },
+  {
+   "id": "cape_void",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Boşluk Pelerini",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/cape_void.png"
+  },
+  {
+   "id": "cape_marble",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Mermer Pelerini",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/cape_marble.png"
+  },
+  {
+   "id": "cape_gold",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Altın Brokar",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/cape_gold.png"
+  },
+  {
+   "id": "cape_silver",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Gümüş Zincir",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/cape_silver.png"
+  },
+  {
+   "id": "cape_obsidian",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Obsidyen Pelerini",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/cape_obsidian.png"
+  },
+  {
+   "id": "cape_diamond",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Elmas Pelerini",
+   "rarity": "legendary",
+   "price": 400,
+   "icon": "build/icons/cape_diamond.png"
+  },
+  {
+   "id": "cape_emerald",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Zümrüt Pelerini",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/cape_emerald.png"
+  },
+  {
+   "id": "cape_ruby",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Yakut Pelerini",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/cape_ruby.png"
+  },
+  {
+   "id": "cape_amethyst",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Ametist Pelerini",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/cape_amethyst.png"
+  },
+  {
+   "id": "cape_netherite",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Netherit Pelerini",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/cape_netherite.png"
+  },
+  {
+   "id": "cape_copper",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Bakır Pelerini",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/cape_copper.png"
+  },
+  {
+   "id": "cape_wood",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Meşe Pelerini",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/cape_wood.png"
+  },
+  {
+   "id": "cape_rainbow",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Gökkuşağı",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/cape_rainbow.png"
+  },
+  {
+   "id": "cape_tiedye",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Batik",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/cape_tiedye.png"
+  },
+  {
+   "id": "cape_plaid_red",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Kırmızı Ekose",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/cape_plaid_red.png"
+  },
+  {
+   "id": "cape_plaid_blue",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Mavi Ekose",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/cape_plaid_blue.png"
+  },
+  {
+   "id": "cape_argyle",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Argyle",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/cape_argyle.png"
+  },
+  {
+   "id": "cape_houndstooth",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Kaz Ayağı",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/cape_houndstooth.png"
+  },
+  {
+   "id": "cape_race",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Yarış Bayrağı",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/cape_race.png"
+  },
+  {
+   "id": "cape_camo_green",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Orman Kamuflajı",
+   "rarity": "common",
+   "price": 0,
+   "icon": "build/icons/cape_camo_green.png"
+  },
+  {
+   "id": "cape_camo_desert",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Çöl Kamuflajı",
+   "rarity": "common",
+   "price": 0,
+   "icon": "build/icons/cape_camo_desert.png"
+  },
+  {
+   "id": "cape_camo_snow",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Kar Kamuflajı",
+   "rarity": "common",
+   "price": 0,
+   "icon": "build/icons/cape_camo_snow.png"
+  },
+  {
+   "id": "cape_leopard",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Leopar",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/cape_leopard.png"
+  },
+  {
+   "id": "cape_tiger",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Kaplan",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/cape_tiger.png"
+  },
+  {
+   "id": "cape_zebra",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Zebra",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/cape_zebra.png"
+  },
+  {
+   "id": "cape_snake",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Yılan Derisi",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/cape_snake.png"
+  },
+  {
+   "id": "cape_honey",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Petek",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/cape_honey.png"
+  },
+  {
+   "id": "cape_polka",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Puantiyeli",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/cape_polka.png"
+  },
+  {
+   "id": "cape_chevron",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Şevron",
+   "rarity": "common",
+   "price": 0,
+   "icon": "build/icons/cape_chevron.png"
+  },
+  {
+   "id": "cape_pastel",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Pastel",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/cape_pastel.png"
+  },
+  {
+   "id": "cape_matrix",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Matrix",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/cape_matrix.png"
+  },
+  {
+   "id": "cape_synthwave",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Synthwave",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/cape_synthwave.png"
+  },
+  {
+   "id": "cape_circuit",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Devre Kartı",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/cape_circuit.png"
+  },
+  {
+   "id": "cape_glitch",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Glitch",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/cape_glitch.png"
+  },
+  {
+   "id": "cape_creeper",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Creeper",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/cape_creeper.png"
+  },
+  {
+   "id": "cape_ender",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Ender",
+   "rarity": "rare",
+   "price": 50,
+   "icon": "build/icons/cape_ender.png"
+  },
+  {
+   "id": "cape_pumpkin",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Balkabağı",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/cape_pumpkin.png"
+  },
+  {
+   "id": "cape_pirate",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Korsan",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/cape_pirate.png"
+  },
+  {
+   "id": "cape_knight",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Şövalye",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/cape_knight.png"
+  },
+  {
+   "id": "cape_royal",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Kraliyet",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/cape_royal.png"
+  },
+  {
+   "id": "cape_ninja",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Ninja",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/cape_ninja.png"
+  },
+  {
+   "id": "cape_samurai",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Samuray",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/cape_samurai.png"
+  },
+  {
+   "id": "cape_dragon",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Ejderha Pulu",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/cape_dragon.png"
+  },
+  {
+   "id": "cape_angel",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Melek",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/cape_angel.png"
+  },
+  {
+   "id": "cape_devil",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Şeytan",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/cape_devil.png"
+  },
+  {
+   "id": "cape_sakura",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Sakura",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/cape_sakura.png"
+  },
+  {
+   "id": "cape_snowflake",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Kar Tanesi",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/cape_snowflake.png"
+  },
+  {
+   "id": "cape_hearts",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Kalpler",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/cape_hearts.png"
+  },
+  {
+   "id": "cape_stars",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Yıldızlı Gece",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/cape_stars.png"
+  },
+  {
+   "id": "cape_moon",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Ay Işığı",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/cape_moon.png"
+  },
+  {
+   "id": "cape_sunset",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Gün Batımı",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/cape_sunset.png"
+  },
+  {
+   "id": "cape_desert",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Çöl",
+   "rarity": "common",
+   "price": 0,
+   "icon": "build/icons/cape_desert.png"
+  },
+  {
+   "id": "cape_forest",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Dağ Ormanı",
+   "rarity": "common",
+   "price": 0,
+   "icon": "build/icons/cape_forest.png"
+  },
+  {
+   "id": "cape_waves",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Dalga",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/cape_waves.png"
+  },
+  {
+   "id": "cape_plain_black",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Siyah Pelerin",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/cape_plain_black.png"
+  },
+  {
+   "id": "cape_plain_red",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Kızıl Pelerin",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/cape_plain_red.png"
+  },
+  {
+   "id": "cape_plain_blue",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Kraliyet Mavisi Pelerin",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/cape_plain_blue.png"
+  },
+  {
+   "id": "cape_plain_green",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Zümrüt Yeşili Pelerin",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/cape_plain_green.png"
+  },
+  {
+   "id": "cape_plain_purple",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Mor Pelerin",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/cape_plain_purple.png"
+  },
+  {
+   "id": "cape_plain_pink",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Pembe Pelerin",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/cape_plain_pink.png"
+  },
+  {
+   "id": "cape_plain_white",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Beyaz Pelerin",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/cape_plain_white.png"
+  },
+  {
+   "id": "cape_plain_yellow",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Güneş Sarısı Pelerin",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/cape_plain_yellow.png"
+  },
+  {
+   "id": "cape_plain_orange",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Turuncu Pelerin",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/cape_plain_orange.png"
+  },
+  {
+   "id": "cape_plain_cyan",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Turkuaz Pelerin",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/cape_plain_cyan.png"
+  },
+  {
+   "id": "cape_plain_gray",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Gri Pelerin",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/cape_plain_gray.png"
+  },
+  {
+   "id": "cape_plain_brown",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Kahverengi Pelerin",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/cape_plain_brown.png"
+  },
+  {
+   "id": "discord",
+   "slot": "cape",
+   "slotTr": "Pelerin",
+   "nameTr": "Discord",
+   "rarity": "legendary",
+   "price": 0,
+   "icon": "build/icons/discord.png",
+   "special": "discord"
+  },
+  {
+   "id": "wings_angel_white",
+   "slot": "wings",
+   "slotTr": "Kanat",
+   "nameTr": "Melek Kanatları",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/wings_angel_white.png"
+  },
+  {
+   "id": "wings_angel_gold",
+   "slot": "wings",
+   "slotTr": "Kanat",
+   "nameTr": "Altın Melek Kanatları",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/wings_angel_gold.png"
+  },
+  {
+   "id": "wings_angel_dark",
+   "slot": "wings",
+   "slotTr": "Kanat",
+   "nameTr": "Kara Melek Kanatları",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/wings_angel_dark.png"
+  },
+  {
+   "id": "wings_angel_blue",
+   "slot": "wings",
+   "slotTr": "Kanat",
+   "nameTr": "VanillaTurkey Kanatları",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/wings_angel_blue.png"
+  },
+  {
+   "id": "wings_ice",
+   "slot": "wings",
+   "slotTr": "Kanat",
+   "nameTr": "Buz Kanatları",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/wings_ice.png"
+  },
+  {
+   "id": "wings_rainbow",
+   "slot": "wings",
+   "slotTr": "Kanat",
+   "nameTr": "Gökkuşağı Kanatları",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/wings_rainbow.png"
+  },
+  {
+   "id": "wings_steel",
+   "slot": "wings",
+   "slotTr": "Kanat",
+   "nameTr": "Çelik Kanatlar",
+   "rarity": "rare",
+   "price": 200,
+   "icon": "build/icons/wings_steel.png"
+  },
+  {
+   "id": "wings_galaxy",
+   "slot": "wings",
+   "slotTr": "Kanat",
+   "nameTr": "Galaksi Kanatları",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/wings_galaxy.png"
+  },
+  {
+   "id": "wings_phoenix",
+   "slot": "wings",
+   "slotTr": "Kanat",
+   "nameTr": "Anka Kanatları",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/wings_phoenix.png"
+  },
+  {
+   "id": "wings_flame",
+   "slot": "wings",
+   "slotTr": "Kanat",
+   "nameTr": "Alev Kanatları",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/wings_flame.png"
+  },
+  {
+   "id": "wings_electric",
+   "slot": "wings",
+   "slotTr": "Kanat",
+   "nameTr": "Yıldırım Kanatları",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/wings_electric.png"
+  },
+  {
+   "id": "wings_turkish",
+   "slot": "wings",
+   "slotTr": "Kanat",
+   "nameTr": "Ay Yıldız Kanatları",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/wings_turkish.png"
+  },
+  {
+   "id": "wings_dragon_green",
+   "slot": "wings",
+   "slotTr": "Kanat",
+   "nameTr": "Yeşil Ejderha Kanatları",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/wings_dragon_green.png"
+  },
+  {
+   "id": "wings_dragon_red",
+   "slot": "wings",
+   "slotTr": "Kanat",
+   "nameTr": "Kızıl Ejderha Kanatları",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/wings_dragon_red.png"
+  },
+  {
+   "id": "wings_dragon_blue",
+   "slot": "wings",
+   "slotTr": "Kanat",
+   "nameTr": "Mavi Ejderha Kanatları",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/wings_dragon_blue.png"
+  },
+  {
+   "id": "wings_dragon_obsidian",
+   "slot": "wings",
+   "slotTr": "Kanat",
+   "nameTr": "Obsidyen Ejderha Kanatları",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/wings_dragon_obsidian.png"
+  },
+  {
+   "id": "wings_bat",
+   "slot": "wings",
+   "slotTr": "Kanat",
+   "nameTr": "Yarasa Kanatları",
+   "rarity": "rare",
+   "price": 200,
+   "icon": "build/icons/wings_bat.png"
+  },
+  {
+   "id": "wings_demon",
+   "slot": "wings",
+   "slotTr": "Kanat",
+   "nameTr": "Şeytan Kanatları",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/wings_demon.png"
+  },
+  {
+   "id": "wings_butterfly_monarch",
+   "slot": "wings",
+   "slotTr": "Kanat",
+   "nameTr": "Monarch Kelebek Kanatları",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/wings_butterfly_monarch.png"
+  },
+  {
+   "id": "wings_butterfly_blue",
+   "slot": "wings",
+   "slotTr": "Kanat",
+   "nameTr": "Mavi Kelebek Kanatları",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/wings_butterfly_blue.png"
+  },
+  {
+   "id": "wings_butterfly_pink",
+   "slot": "wings",
+   "slotTr": "Kanat",
+   "nameTr": "Pembe Kelebek Kanatları",
+   "rarity": "rare",
+   "price": 200,
+   "icon": "build/icons/wings_butterfly_pink.png"
+  },
+  {
+   "id": "wings_butterfly_green",
+   "slot": "wings",
+   "slotTr": "Kanat",
+   "nameTr": "Yeşil Kelebek Kanatları",
+   "rarity": "rare",
+   "price": 200,
+   "icon": "build/icons/wings_butterfly_green.png"
+  },
+  {
+   "id": "wings_fairy",
+   "slot": "wings",
+   "slotTr": "Kanat",
+   "nameTr": "Peri Kanatları",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/wings_fairy.png"
+  },
+  {
+   "id": "wings_bee",
+   "slot": "wings",
+   "slotTr": "Kanat",
+   "nameTr": "Arı Kanatları",
+   "rarity": "rare",
+   "price": 200,
+   "icon": "build/icons/wings_bee.png"
+  },
+  {
+   "id": "wings_leaf",
+   "slot": "wings",
+   "slotTr": "Kanat",
+   "nameTr": "Yaprak Kanatları",
+   "rarity": "rare",
+   "price": 200,
+   "icon": "build/icons/wings_leaf.png"
+  },
+  {
+   "id": "wings_crystal",
+   "slot": "wings",
+   "slotTr": "Kanat",
+   "nameTr": "Ametist Kanatlar",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/wings_crystal.png"
+  },
+  {
+   "id": "wings_ghost",
+   "slot": "wings",
+   "slotTr": "Kanat",
+   "nameTr": "Hayalet Kanatları",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/wings_ghost.png"
+  },
+  {
+   "id": "wings_steampunk",
+   "slot": "wings",
+   "slotTr": "Kanat",
+   "nameTr": "Buharlı Kanatlar",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/wings_steampunk.png"
+  },
+  {
+   "id": "pet_cat_orange",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Turuncu Kedi",
+   "rarity": "common",
+   "price": 50,
+   "icon": "build/icons/pet_cat_orange.png"
+  },
+  {
+   "id": "pet_cat_black",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Kara Kedi",
+   "rarity": "common",
+   "price": 50,
+   "icon": "build/icons/pet_cat_black.png"
+  },
+  {
+   "id": "pet_cat_white",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Beyaz Kedi",
+   "rarity": "rare",
+   "price": 200,
+   "icon": "build/icons/pet_cat_white.png"
+  },
+  {
+   "id": "pet_cat_siamese",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Siyam Kedisi",
+   "rarity": "rare",
+   "price": 200,
+   "icon": "build/icons/pet_cat_siamese.png"
+  },
+  {
+   "id": "pet_dog_shiba",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Shiba",
+   "rarity": "rare",
+   "price": 200,
+   "icon": "build/icons/pet_dog_shiba.png"
+  },
+  {
+   "id": "pet_dog_husky",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Haski",
+   "rarity": "rare",
+   "price": 200,
+   "icon": "build/icons/pet_dog_husky.png"
+  },
+  {
+   "id": "pet_dog_dalmatian",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Dalmaçyalı",
+   "rarity": "rare",
+   "price": 200,
+   "icon": "build/icons/pet_dog_dalmatian.png"
+  },
+  {
+   "id": "pet_dog_golden",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Golden Retriever",
+   "rarity": "common",
+   "price": 50,
+   "icon": "build/icons/pet_dog_golden.png"
+  },
+  {
+   "id": "pet_wolf",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Kurt Yavrusu",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/pet_wolf.png"
+  },
+  {
+   "id": "pet_fox",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Tilki",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/pet_fox.png"
+  },
+  {
+   "id": "pet_panda",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Panda",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/pet_panda.png"
+  },
+  {
+   "id": "pet_red_panda",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Kızıl Panda",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/pet_red_panda.png"
+  },
+  {
+   "id": "pet_rabbit_white",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Beyaz Tavşan",
+   "rarity": "common",
+   "price": 50,
+   "icon": "build/icons/pet_rabbit_white.png"
+  },
+  {
+   "id": "pet_rabbit_brown",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Kahverengi Tavşan",
+   "rarity": "common",
+   "price": 50,
+   "icon": "build/icons/pet_rabbit_brown.png"
+  },
+  {
+   "id": "pet_pig",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Domuz",
+   "rarity": "common",
+   "price": 50,
+   "icon": "build/icons/pet_pig.png"
+  },
+  {
+   "id": "pet_sheep",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Koyun",
+   "rarity": "common",
+   "price": 50,
+   "icon": "build/icons/pet_sheep.png"
+  },
+  {
+   "id": "pet_chick",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Civciv",
+   "rarity": "common",
+   "price": 0,
+   "icon": "build/icons/pet_chick.png"
+  },
+  {
+   "id": "pet_duck",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Ördek",
+   "rarity": "common",
+   "price": 0,
+   "icon": "build/icons/pet_duck.png"
+  },
+  {
+   "id": "pet_penguin",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Penguen",
+   "rarity": "rare",
+   "price": 200,
+   "icon": "build/icons/pet_penguin.png"
+  },
+  {
+   "id": "pet_owl",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Baykuş",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/pet_owl.png"
+  },
+  {
+   "id": "pet_parrot",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Papağan",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/pet_parrot.png"
+  },
+  {
+   "id": "pet_bee",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Arı",
+   "rarity": "common",
+   "price": 0,
+   "icon": "build/icons/pet_bee.png"
+  },
+  {
+   "id": "pet_bat",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Yarasa",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/pet_bat.png"
+  },
+  {
+   "id": "pet_dragon_green",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Yeşil Ejderha Yavrusu",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/pet_dragon_green.png"
+  },
+  {
+   "id": "pet_dragon_red",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Kızıl Ejderha Yavrusu",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/pet_dragon_red.png"
+  },
+  {
+   "id": "pet_drone",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Mini Drone",
+   "rarity": "rare",
+   "price": 200,
+   "icon": "build/icons/pet_drone.png"
+  },
+  {
+   "id": "pet_ufo",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Mini UFO",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/pet_ufo.png"
+  },
+  {
+   "id": "pet_phoenix",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Anka Yavrusu",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/pet_phoenix.png"
+  },
+  {
+   "id": "pet_slime",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Balçık",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/pet_slime.png"
+  },
+  {
+   "id": "pet_magma",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Magma Küpü",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/pet_magma.png"
+  },
+  {
+   "id": "pet_ghost",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Hayalet",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/pet_ghost.png"
+  },
+  {
+   "id": "pet_jellyfish",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Denizanası",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/pet_jellyfish.png"
+  },
+  {
+   "id": "pet_creeper",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Mini Creeper",
+   "rarity": "rare",
+   "price": 200,
+   "icon": "build/icons/pet_creeper.png"
+  },
+  {
+   "id": "pet_turtle",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Kaplumbağa",
+   "rarity": "common",
+   "price": 0,
+   "icon": "build/icons/pet_turtle.png"
+  },
+  {
+   "id": "pet_frog",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Kurbağa",
+   "rarity": "common",
+   "price": 0,
+   "icon": "build/icons/pet_frog.png"
+  },
+  {
+   "id": "pet_axolotl",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Aksolotl",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/pet_axolotl.png"
+  },
+  {
+   "id": "pet_dino",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Mini Dino",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/pet_dino.png"
+  },
+  {
+   "id": "pet_sun_spirit",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Güneş Ruhu",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/pet_sun_spirit.png"
+  },
+  {
+   "id": "pet_cloud",
+   "slot": "pet",
+   "slotTr": "Evcil Hayvan",
+   "nameTr": "Mini Bulut",
+   "rarity": "rare",
+   "price": 200,
+   "icon": "build/icons/pet_cloud.png"
+  },
+  {
+   "id": "aura_embers",
+   "slot": "aura",
+   "slotTr": "Aura",
+   "nameTr": "Köz Aurası",
+   "rarity": "rare",
+   "price": 200,
+   "icon": "build/icons/aura_embers.png"
+  },
+  {
+   "id": "aura_snow",
+   "slot": "aura",
+   "slotTr": "Aura",
+   "nameTr": "Kar Yağışı",
+   "rarity": "rare",
+   "price": 200,
+   "icon": "build/icons/aura_snow.png"
+  },
+  {
+   "id": "aura_hearts",
+   "slot": "aura",
+   "slotTr": "Aura",
+   "nameTr": "Kalp Aurası",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/aura_hearts.png"
+  },
+  {
+   "id": "aura_stars",
+   "slot": "aura",
+   "slotTr": "Aura",
+   "nameTr": "Yıldız Tozu",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/aura_stars.png"
+  },
+  {
+   "id": "aura_notes",
+   "slot": "aura",
+   "slotTr": "Aura",
+   "nameTr": "Müzik Notaları",
+   "rarity": "rare",
+   "price": 200,
+   "icon": "build/icons/aura_notes.png"
+  },
+  {
+   "id": "aura_souls",
+   "slot": "aura",
+   "slotTr": "Aura",
+   "nameTr": "Ruh Aurası",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/aura_souls.png"
+  },
+  {
+   "id": "aura_leaves",
+   "slot": "aura",
+   "slotTr": "Aura",
+   "nameTr": "Yaprak Yağmuru",
+   "rarity": "rare",
+   "price": 200,
+   "icon": "build/icons/aura_leaves.png"
+  },
+  {
+   "id": "aura_sakura",
+   "slot": "aura",
+   "slotTr": "Aura",
+   "nameTr": "Sakura Yağmuru",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/aura_sakura.png"
+  },
+  {
+   "id": "aura_bubbles",
+   "slot": "aura",
+   "slotTr": "Aura",
+   "nameTr": "Baloncuklar",
+   "rarity": "rare",
+   "price": 200,
+   "icon": "build/icons/aura_bubbles.png"
+  },
+  {
+   "id": "aura_fireflies",
+   "slot": "aura",
+   "slotTr": "Aura",
+   "nameTr": "Ateşböcekleri",
+   "rarity": "rare",
+   "price": 200,
+   "icon": "build/icons/aura_fireflies.png"
+  },
+  {
+   "id": "aura_ender",
+   "slot": "aura",
+   "slotTr": "Aura",
+   "nameTr": "Ender Aurası",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/aura_ender.png"
+  },
+  {
+   "id": "aura_coins",
+   "slot": "aura",
+   "slotTr": "Aura",
+   "nameTr": "Altın Yağmuru",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/aura_coins.png"
+  },
+  {
+   "id": "aura_bats",
+   "slot": "aura",
+   "slotTr": "Aura",
+   "nameTr": "Yarasa Sürüsü",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/aura_bats.png"
+  },
+  {
+   "id": "aura_lightning",
+   "slot": "aura",
+   "slotTr": "Aura",
+   "nameTr": "Yıldırım Aurası",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/aura_lightning.png"
+  },
+  {
+   "id": "aura_blue_sparks",
+   "slot": "aura",
+   "slotTr": "Aura",
+   "nameTr": "Mavi Kıvılcım",
+   "rarity": "rare",
+   "price": 200,
+   "icon": "build/icons/aura_blue_sparks.png"
+  },
+  {
+   "id": "aura_glitch",
+   "slot": "aura",
+   "slotTr": "Aura",
+   "nameTr": "Glitch Aurası",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/aura_glitch.png"
+  },
+  {
+   "id": "aura_rainbow",
+   "slot": "aura",
+   "slotTr": "Aura",
+   "nameTr": "Gökkuşağı Halkaları",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/aura_rainbow.png"
+  },
+  {
+   "id": "aura_galaxy",
+   "slot": "aura",
+   "slotTr": "Aura",
+   "nameTr": "Galaksi Halkası",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/aura_galaxy.png"
+  },
+  {
+   "id": "aura_magic_blue",
+   "slot": "aura",
+   "slotTr": "Aura",
+   "nameTr": "Mavi Büyü Çemberi",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/aura_magic_blue.png"
+  },
+  {
+   "id": "aura_magic_red",
+   "slot": "aura",
+   "slotTr": "Aura",
+   "nameTr": "Kızıl Büyü Çemberi",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/aura_magic_red.png"
+  },
+  {
+   "id": "aura_magic_purple",
+   "slot": "aura",
+   "slotTr": "Aura",
+   "nameTr": "Mor Büyü Çemberi",
+   "rarity": "legendary",
+   "price": 800,
+   "icon": "build/icons/aura_magic_purple.png"
+  },
+  {
+   "id": "aura_tornado",
+   "slot": "aura",
+   "slotTr": "Aura",
+   "nameTr": "Kasırga",
+   "rarity": "epic",
+   "price": 400,
+   "icon": "build/icons/aura_tornado.png"
+  },
+  {
+   "id": "aura_ripple",
+   "slot": "aura",
+   "slotTr": "Aura",
+   "nameTr": "Dalga Halkaları",
+   "rarity": "rare",
+   "price": 200,
+   "icon": "build/icons/aura_ripple.png"
+  },
+  {
+   "id": "hit_ring_white",
+   "slot": "hit",
+   "slotTr": "Vuruş efekti",
+   "nameTr": "Beyaz Halka",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/hit_ring_white.png"
+  },
+  {
+   "id": "hit_ring_cyan",
+   "slot": "hit",
+   "slotTr": "Vuruş efekti",
+   "nameTr": "Camgöbeği Halka",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/hit_ring_cyan.png"
+  },
+  {
+   "id": "hit_ring_pink",
+   "slot": "hit",
+   "slotTr": "Vuruş efekti",
+   "nameTr": "Pembe Halka",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/hit_ring_pink.png"
+  },
+  {
+   "id": "hit_sparks_gold",
+   "slot": "hit",
+   "slotTr": "Vuruş efekti",
+   "nameTr": "Altın Kıvılcım",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/hit_sparks_gold.png"
+  },
+  {
+   "id": "hit_sparks_red",
+   "slot": "hit",
+   "slotTr": "Vuruş efekti",
+   "nameTr": "Kızıl Kıvılcım",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/hit_sparks_red.png"
+  },
+  {
+   "id": "hit_confetti",
+   "slot": "hit",
+   "slotTr": "Vuruş efekti",
+   "nameTr": "Konfeti",
+   "rarity": "common",
+   "price": 25,
+   "icon": "build/icons/hit_confetti.png"
+  },
+  {
+   "id": "hit_slash_white",
+   "slot": "hit",
+   "slotTr": "Vuruş efekti",
+   "nameTr": "Beyaz Kesik",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/hit_slash_white.png"
+  },
+  {
+   "id": "hit_slash_crimson",
+   "slot": "hit",
+   "slotTr": "Vuruş efekti",
+   "nameTr": "Kızıl Çapraz Kesik",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/hit_slash_crimson.png"
+  },
+  {
+   "id": "hit_shockwave",
+   "slot": "hit",
+   "slotTr": "Vuruş efekti",
+   "nameTr": "Şok Dalgası",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/hit_shockwave.png"
+  },
+  {
+   "id": "hit_star",
+   "slot": "hit",
+   "slotTr": "Vuruş efekti",
+   "nameTr": "Yıldız Patlaması",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/hit_star.png"
+  },
+  {
+   "id": "hit_cross",
+   "slot": "hit",
+   "slotTr": "Vuruş efekti",
+   "nameTr": "Haç Parlaması",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/hit_cross.png"
+  },
+  {
+   "id": "hit_ice",
+   "slot": "hit",
+   "slotTr": "Vuruş efekti",
+   "nameTr": "Buz Parçaları",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/hit_ice.png"
+  },
+  {
+   "id": "hit_poison",
+   "slot": "hit",
+   "slotTr": "Vuruş efekti",
+   "nameTr": "Zehir Bulutu",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/hit_poison.png"
+  },
+  {
+   "id": "hit_pixel",
+   "slot": "hit",
+   "slotTr": "Vuruş efekti",
+   "nameTr": "Piksel Dağılımı",
+   "rarity": "rare",
+   "price": 100,
+   "icon": "build/icons/hit_pixel.png"
+  },
+  {
+   "id": "hit_crit",
+   "slot": "hit",
+   "slotTr": "Vuruş efekti",
+   "nameTr": "Kritik Vuruş",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/hit_crit.png"
+  },
+  {
+   "id": "hit_lightning",
+   "slot": "hit",
+   "slotTr": "Vuruş efekti",
+   "nameTr": "Şimşek Çarpması",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/hit_lightning.png"
+  },
+  {
+   "id": "hit_fire",
+   "slot": "hit",
+   "slotTr": "Vuruş efekti",
+   "nameTr": "Ateş Patlaması",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/hit_fire.png"
+  },
+  {
+   "id": "hit_hearts",
+   "slot": "hit",
+   "slotTr": "Vuruş efekti",
+   "nameTr": "Kalp Patlaması",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/hit_hearts.png"
+  },
+  {
+   "id": "hit_void",
+   "slot": "hit",
+   "slotTr": "Vuruş efekti",
+   "nameTr": "Boşluk Çöküşü",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/hit_void.png"
+  },
+  {
+   "id": "hit_spiral",
+   "slot": "hit",
+   "slotTr": "Vuruş efekti",
+   "nameTr": "Spiral Dalga",
+   "rarity": "epic",
+   "price": 200,
+   "icon": "build/icons/hit_spiral.png"
+  },
+  {
+   "id": "hit_coins",
+   "slot": "hit",
+   "slotTr": "Vuruş efekti",
+   "nameTr": "Altın Yağmuru",
+   "rarity": "legendary",
+   "price": 400,
+   "icon": "build/icons/hit_coins.png"
+  },
+  {
+   "id": "hit_rainbow",
+   "slot": "hit",
+   "slotTr": "Vuruş efekti",
+   "nameTr": "Gökkuşağı Dalgası",
+   "rarity": "legendary",
+   "price": 400,
+   "icon": "build/icons/hit_rainbow.png"
+  },
+  {
+   "id": "hit_galaxy",
+   "slot": "hit",
+   "slotTr": "Vuruş efekti",
+   "nameTr": "Galaksi Patlaması",
+   "rarity": "legendary",
+   "price": 400,
+   "icon": "build/icons/hit_galaxy.png"
+  }
+ ]
+}

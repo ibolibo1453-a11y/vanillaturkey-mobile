@@ -1,0 +1,170 @@
+{
+  "name": "vanillaturkey-client-launcher",
+  "version": "1.8.0",
+  "description": "VanillaTurkey Client launcher",
+  "author": {
+    "name": "VanillaTurkey",
+    "email": "destek@vanillaturkey.net"
+  },
+  "main": "dist-electron/main.js",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "node tools/sync-cosmetics.mjs && tsc --noEmit && vite build && node tools/build-electron.mjs",
+    "start": "npm run build && electron .",
+    "dist": "npm run build && electron-builder --win nsis",
+    "logo": "node ../tools/logo/block_assets.mjs",
+    "dist:linux": "npm run build && electron-builder --linux AppImage deb",
+    "dist:mac": "npm run build && electron-builder --mac dmg"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "@types/node": "^26.6.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/ws": "^8.18.2",
+    "@vitejs/plugin-react": "^6.1.1",
+    "electron": "^44.5.1",
+    "electron-builder": "^26.15.3",
+    "esbuild": "^0.28.2",
+    "png-to-ico": "^3.0.2",
+    "sharp": "^0.35.5",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.2"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource/barlow": "^5.3.0",
+    "@sapphi-red/web-noise-suppressor": "^0.4.1",
+    "@types/three": "^0.156.0",
+    "@xhayper/discord-rpc": "^1.5.1",
+    "@xmcl/core": "^2.15.1",
+    "@xmcl/installer": "^6.1.2",
+    "electron-updater": "^6.8.9",
+    "livekit-client": "^2.22.3",
+    "lucide-react": "^1.51.0",
+    "msmc": "^5.0.5",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "skinview3d": "^3.4.2",
+    "three": "^0.156.1",
+    "uiohook-napi": "^1.5.5",
+    "ws": "^8.22.0"
+  },
+  "build": {
+    "appId": "net.vanillaturkey.client",
+    "productName": "VanillaTurkey Client",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "app-renderer/**",
+      "dist-electron/**",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "resources",
+        "to": "resources",
+        "filter": [
+          "**/*",
+          "!**/README.md"
+        ]
+      }
+    ],
+    "asar": true,
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico",
+      "artifactName": "VanillaTurkey Client Setup.${ext}"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "VanillaTurkey Client",
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "deleteAppDataOnUninstall": false,
+      "runAfterFinish": true
+    },
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "https://80-91-71-177.sslip.io/vtclient/launcher/"
+      }
+    ],
+    "asarUnpack": [
+      "**/node_modules/uiohook-napi/**"
+    ],
+    "linux": {
+      "target": [
+        {
+          "target": "AppImage",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "deb",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.png",
+      "category": "Game",
+      "synopsis": "VanillaTurkey Minecraft launcher",
+      "artifactName": "VanillaTurkey-Client-${version}.${ext}",
+      "maintainer": "VanillaTurkey <destek@vanillaturkey.net>"
+    },
+    "deb": {
+      "depends": [
+        "libgtk-3-0",
+        "libnotify4",
+        "libnss3",
+        "libxss1",
+        "libxtst6",
+        "xdg-utils",
+        "libatspi2.0-0",
+        "libuuid1",
+        "libsecret-1-0",
+        "libx11-dev",
+        "libxkbfile1"
+      ]
+    },
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ],
+      "icon": "build/icon.png",
+      "category": "public.app-category.games",
+      "artifactName": "VanillaTurkey-Client-${version}-${arch}.${ext}",
+      "hardenedRuntime": false,
+      "extendInfo": {
+        "NSMicrophoneUsageDescription": "Ses odalarında konuşabilmek için mikrofon gerekir."
+      }
+    },
+    "dmg": {
+      "title": "VanillaTurkey Client"
+    },
+    "npmRebuild": false
+  },
+  "homepage": "https://80-91-71-177.sslip.io/"
+}

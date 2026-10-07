@@ -1,0 +1,33 @@
+/* R5-C coins: pill, card, history modal, shop bits (launcher + PWA) */
+.coin-ico { display: inline-block; flex: none; vertical-align: -0.2em; }
+.coin-pill { height: 40px; padding: 0 14px 0 11px; display: inline-flex; align-items: center; gap: 7px; font-weight: 750; font-size: 14px; color: #fff; cursor: pointer; transition: transform .15s, box-shadow .15s; }
+.coin-pill:hover { transform: translateY(-1px); box-shadow: var(--hl), 0 0 18px rgba(255,194,77,.35); }
+.coin-pill b { font-variant-numeric: tabular-nums; letter-spacing: -.01em; }
+.coin-pill.bump { animation: coinBump .6s var(--ease, ease); }
+@keyframes coinBump { 30% { transform: scale(1.14); box-shadow: var(--hl), 0 0 22px rgba(255,194,77,.7); } }
+.coin-top { display: flex; align-items: center; gap: 11px; }
+.coin-big { display: flex; align-items: center; gap: 9px; } .coin-big h2 { font-size: 28px; font-weight: 780; letter-spacing: -.02em; font-variant-numeric: tabular-nums; } .coin-big span { font-size: 12px; color: var(--t2); }
+.coin-daily { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 12px; border-radius: 12px; background: rgba(255,255,255,.1); border: 1px solid var(--gbn); font-size: 12px; color: var(--t2); }
+.coin-daily b { color: #fff; font-weight: 700; } .coin-daily.done b { color: #7ee8a8; }
+.coin-play { display: flex; flex-direction: column; gap: 5px; font-size: 11.5px; color: var(--t2); } .coin-play .row { display: flex; justify-content: space-between; }
+.coin-link { color: var(--cyan); font-weight: 650; font-size: 12px; cursor: pointer; background: none; }
+.coin-modal-scrim { position: fixed; inset: 0; z-index: 90; background: rgba(6,12,24,.55); display: grid; place-items: center; backdrop-filter: blur(3px); }
+.coin-modal { width: min(440px, calc(100vw - 32px)); max-height: min(560px, 82vh); display: flex; flex-direction: column; gap: 12px; padding: 18px; border-radius: 22px; background: var(--tint), var(--g); border: 1px solid var(--gb); box-shadow: var(--hl), var(--shadow); color: #fff; }
+.coin-modal h3 { font-size: 18px; font-weight: 740; display: flex; align-items: center; gap: 8px; } .coin-modal h3 button { margin-left: auto; color: var(--t2); }
+.coin-modal p { font-size: 13.5px; color: var(--t2); line-height: 1.5; } .coin-modal p b { color: #fff; }
+.coin-modal .btns { display: flex; justify-content: flex-end; gap: 9px; }
+.coin-hist { overflow-y: auto; display: flex; flex-direction: column; gap: 4px; min-height: 80px; padding-right: 4px; }
+.coin-hist li { list-style: none; display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; padding: 8px 10px; border-radius: 10px; background: rgba(255,255,255,.07); font-size: 12.5px; }
+.coin-hist li b { font-variant-numeric: tabular-nums; font-weight: 750; } .coin-hist li b.pos { color: #7ee8a8; } .coin-hist li b.neg { color: #ff9aa8; }
+.coin-hist li small { grid-column: 1 / -1; color: var(--t3); font-size: 11px; }
+.kt-price { position: absolute; right: 5px; bottom: 5px; display: inline-flex; align-items: center; gap: 4px; height: 20px; padding: 0 8px 0 6px; border-radius: 999px; background: rgba(10,22,40,.72); border: 1px solid rgba(255,194,77,.5); font-size: 11.5px; font-weight: 750; font-variant-numeric: tabular-nums; }
+.kt-price s { color: var(--t3); font-weight: 600; font-size: 10px; } .kt-price.sale { border-color: #7ee8a8; }
+.kt-own { position: absolute; top: 5px; right: 5px; width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center; background: rgba(61,220,132,.85); }
+.kos-prevbar.buy { gap: 9px; } .kos-prevbar .buy-btn { margin-left: auto; height: 26px; padding: 0 14px; border-radius: 999px; background: var(--grad); color: #fff !important; font-weight: 750; display: inline-flex; align-items: center; gap: 6px; border: 1px solid rgba(255,255,255,.4); }
+.kos-prevbar .buy-btn:disabled { opacity: .5; } .kos-prevbar .buy-btn + button { margin-left: 4px; }
+.kos-sale { height: 28px; padding: 0 12px; border-radius: 999px; background: rgba(61,220,132,.2); border: 1px solid #7ee8a8; display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; }
+
+/* R5 QA: the buy bar of a previewed item wrapped "Satın al" onto two lines in the narrow preview column: wrap the bar instead */
+.kos-prevbar.buy { flex-wrap: wrap; justify-content: flex-end; border-radius: 20px; row-gap: 6px; padding: 8px 12px; }
+.kos-prevbar.buy button { white-space: nowrap; flex: none; }
+.kos-prevbar.buy .buy-btn { margin-left: 0; }

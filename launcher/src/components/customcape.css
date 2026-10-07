@@ -1,0 +1,11 @@
+/* Özel pelerin row (Cosmetics, cape tab): one flat row inside the existing glass column, no extra card */
+.ccp { flex: none; display: flex; align-items: center; gap: 14px; padding: 8px 4px; border-top: 1px solid var(--gbn, rgba(255,255,255,.18)); border-bottom: 1px solid var(--gbn, rgba(255,255,255,.18)); }
+.ccp-txt { min-width: 0; flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.ccp-txt b { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; }
+.ccp-txt span { color: var(--t3, rgba(255,255,255,.6)); font-size: 12.5px; }
+.ccp-err { font-style: normal; color: #ff8a98; font-size: 12.5px; font-weight: 600; }
+.ccp-busy { font-style: normal; color: var(--t2, #fff); font-size: 12.5px; display: inline-flex; align-items: center; gap: 8px; }
+.ccp-spin { width: 12px; height: 12px; border-radius: 50%; border: 2px solid rgba(255,255,255,.35); border-top-color: #fff; animation: ccp-rot .8s linear infinite; }
+@keyframes ccp-rot { to { transform: rotate(360deg); } }
+.ccp-btns { display: flex; gap: 8px; flex: none; }
+.ccp-btns .btn-primary, .ccp-btns .btn-outline { height: 34px; padding: 0 16px; font-size: 13px; }

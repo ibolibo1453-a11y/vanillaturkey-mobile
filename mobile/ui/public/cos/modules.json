@@ -1,0 +1,821 @@
+[
+  {
+    "id": "fps",
+    "nameTr": "FPS",
+    "descTr": "Saniyedeki kare sayısını gösterir.",
+    "category": "HUD",
+    "icon": "gauge"
+  },
+  {
+    "id": "cps",
+    "nameTr": "CPS",
+    "descTr": "Saniyedeki tık sayısını gösterir.",
+    "category": "HUD",
+    "icon": "pointer_click"
+  },
+  {
+    "id": "coords",
+    "nameTr": "Koordinatlar",
+    "descTr": "X, Y, Z, bakış yönü ve biyom (Lunar tarzı).",
+    "category": "HUD",
+    "icon": "map_pin"
+  },
+  {
+    "id": "ping",
+    "nameTr": "Ping",
+    "descTr": "Sunucuya olan gecikmeni gösterir.",
+    "category": "HUD",
+    "icon": "wifi"
+  },
+  {
+    "id": "keystrokes",
+    "nameTr": "Keystrokes",
+    "descTr": "Hareket ve tık tuşlarını ekranda gösterir.",
+    "category": "HUD",
+    "icon": "keyboard"
+  },
+  {
+    "id": "armorhud",
+    "nameTr": "Zırh HUD",
+    "descTr": "Giydiğin zırhları ve dayanıklılıklarını gösterir.",
+    "category": "HUD",
+    "icon": "chestplate"
+  },
+  {
+    "id": "potionhud",
+    "nameTr": "İksir HUD",
+    "descTr": "Aktif iksir etkilerini ve kalan süreyi gösterir.",
+    "category": "HUD",
+    "icon": "flask"
+  },
+  {
+    "id": "clock",
+    "nameTr": "Saat",
+    "descTr": "Bilgisayarının saatini gösterir.",
+    "category": "HUD",
+    "icon": "clock"
+  },
+  {
+    "id": "direction",
+    "nameTr": "Yön",
+    "descTr": "Baktığın yönü (pusula) gösterir.",
+    "category": "HUD",
+    "icon": "compass"
+  },
+  {
+    "id": "fullbright",
+    "nameTr": "Fullbright",
+    "descTr": "Karanlık yerleri tamamen aydınlık gösterir (sadece görüntü).",
+    "category": "Görsel",
+    "icon": "sun"
+  },
+  {
+    "id": "zoom",
+    "nameTr": "Zoom",
+    "descTr": "Bir tuşa basılı tutarak uzağı yakınlaştırır.",
+    "category": "Görsel",
+    "icon": "zoom"
+  },
+  {
+    "id": "crosshair",
+    "nameTr": "Özel Nişangâh",
+    "descTr": "Nişangâhını istediğin gibi özelleştir.",
+    "category": "Görsel",
+    "icon": "crosshair"
+  },
+  {
+    "id": "combo",
+    "nameTr": "Combo",
+    "descTr": "Üst üste vurduğun vuruş sayısını gösterir.",
+    "category": "PvP",
+    "icon": "flame"
+  },
+  {
+    "id": "togglesprint",
+    "nameTr": "Toggle Sprint",
+    "descTr": "Koşu tuşuna bir kez basınca sürekli koşar, tekrar basınca durur.",
+    "category": "Performans",
+    "icon": "chevrons_right"
+  },
+  {
+    "id": "togglesneak",
+    "nameTr": "Toggle Sneak",
+    "descTr": "Eğilme tuşuna bir kez basınca sürekli eğilir, tekrar basınca kalkar.",
+    "category": "Performans",
+    "icon": "chevrons_down"
+  },
+  {
+    "id": "memoryusage",
+    "nameTr": "Bellek Kullanımı",
+    "descTr": "Oyunun kullandığı RAM miktarını gösterir.",
+    "category": "HUD",
+    "icon": "cpu"
+  },
+  {
+    "id": "tps",
+    "nameTr": "TPS Tahmini",
+    "descTr": "Sunucunun saniyedeki tick sayısını tahmin eder.",
+    "category": "HUD",
+    "icon": "activity"
+  },
+  {
+    "id": "speed",
+    "nameTr": "Hız Göstergesi",
+    "descTr": "Hareket hızını saniyede blok (b/s) olarak gösterir.",
+    "category": "HUD",
+    "icon": "speed_arrow"
+  },
+  {
+    "id": "biome",
+    "nameTr": "Biyom",
+    "descTr": "Bulunduğun biyomun adını gösterir.",
+    "category": "HUD",
+    "icon": "mountain"
+  },
+  {
+    "id": "daycount",
+    "nameTr": "Gün Sayacı",
+    "descTr": "Dünyada geçen oyun günü sayısını gösterir.",
+    "category": "HUD",
+    "icon": "calendar_days"
+  },
+  {
+    "id": "session",
+    "nameTr": "Oturum Süresi",
+    "descTr": "Bu oturumda ne kadar oynadığını gösterir.",
+    "category": "HUD",
+    "icon": "hourglass"
+  },
+  {
+    "id": "serveraddr",
+    "nameTr": "Sunucu Adresi",
+    "descTr": "Bağlı olduğun sunucunun adresini gösterir.",
+    "category": "HUD",
+    "icon": "server"
+  },
+  {
+    "id": "lightlevel",
+    "nameTr": "Işık Seviyesi",
+    "descTr": "Bulunduğun yerdeki blok ve gökyüzü ışığını gösterir.",
+    "category": "HUD",
+    "icon": "lightbulb"
+  },
+  {
+    "id": "chunkcount",
+    "nameTr": "Chunk Sayısı",
+    "descTr": "Yüklü chunk sayısını gösterir.",
+    "category": "HUD",
+    "icon": "grid_lines"
+  },
+  {
+    "id": "entitycount",
+    "nameTr": "Varlık Sayısı",
+    "descTr": "Yüklü varlık (mob, eşya, oyuncu) sayısını gösterir.",
+    "category": "HUD",
+    "icon": "ghost"
+  },
+  {
+    "id": "arrows",
+    "nameTr": "Ok Sayacı",
+    "descTr": "Envanterindeki ok sayısını gösterir.",
+    "category": "HUD",
+    "icon": "bow"
+  },
+  {
+    "id": "itemcount",
+    "nameTr": "Eşya Sayacı",
+    "descTr": "Seçtiğin eşyadan envanterinde kaç tane olduğunu gösterir.",
+    "category": "HUD",
+    "icon": "package"
+  },
+  {
+    "id": "helddurability",
+    "nameTr": "Eşya Dayanıklılığı",
+    "descTr": "Elindeki eşyanın dayanıklılığını gösterir.",
+    "category": "HUD",
+    "icon": "hammer"
+  },
+  {
+    "id": "totemcount",
+    "nameTr": "Totem Sayacı",
+    "descTr": "Envanterindeki ölümsüzlük totemi sayısını gösterir.",
+    "category": "HUD",
+    "icon": "heart_plus"
+  },
+  {
+    "id": "pinggraph",
+    "nameTr": "Ping Grafiği",
+    "descTr": "Gecikmenin zaman içindeki değişimini grafik olarak gösterir.",
+    "category": "HUD",
+    "icon": "chart_line"
+  },
+  {
+    "id": "fpsgraph",
+    "nameTr": "FPS Grafiği",
+    "descTr": "Son saniyelerdeki FPS değerlerini grafik olarak gösterir.",
+    "category": "HUD",
+    "icon": "chart_bars"
+  },
+  {
+    "id": "date",
+    "nameTr": "Tarih",
+    "descTr": "Bilgisayarının tarihini gösterir.",
+    "category": "HUD",
+    "icon": "calendar_check"
+  },
+  {
+    "id": "gametime",
+    "nameTr": "Oyun Saati",
+    "descTr": "Minecraft içindeki gün saatini gösterir.",
+    "category": "HUD",
+    "icon": "moon"
+  },
+  {
+    "id": "target",
+    "nameTr": "Hedef Bilgisi",
+    "descTr": "Baktığın bloğun veya varlığın adını gösterir.",
+    "category": "HUD",
+    "icon": "scan"
+  },
+  {
+    "id": "packs",
+    "nameTr": "Paket Göstergesi",
+    "descTr": "Aktif kaynak paketlerinin adlarını listeler.",
+    "category": "HUD",
+    "icon": "layers"
+  },
+  {
+    "id": "bossbar",
+    "nameTr": "Boss Bar Ayarı",
+    "descTr": "Boss barını küçültür, kaydırır veya gizler.",
+    "category": "HUD",
+    "icon": "skull"
+  },
+  {
+    "id": "scoreboard",
+    "nameTr": "Scoreboard Ayarı",
+    "descTr": "Skor tablosunu küçültür, kaydırır, sayıları gizler.",
+    "category": "HUD",
+    "icon": "clipboard_list"
+  },
+  {
+    "id": "tablist",
+    "nameTr": "Tab Listesi Ayarı",
+    "descTr": "Oyuncu listesinde ping'i sayı olarak gösterir.",
+    "category": "HUD",
+    "icon": "list_avatars"
+  },
+  {
+    "id": "chat",
+    "nameTr": "Sohbet Araçları",
+    "descTr": "Sohbete zaman damgası ekler, son mesajı kopyalama tuşu verir.",
+    "category": "HUD",
+    "icon": "message"
+  },
+  {
+    "id": "titlescale",
+    "nameTr": "Başlık Ölçeği",
+    "descTr": "Ekran ortasındaki başlık/altyazı yazılarını küçültür veya gizler.",
+    "category": "HUD",
+    "icon": "type_t"
+  },
+  {
+    "id": "hotbar",
+    "nameTr": "Hotbar Ayarı",
+    "descTr": "Hotbar'ı küçültür/büyütür, kaydırır, eşya adını gizler.",
+    "category": "HUD",
+    "icon": "hotbar"
+  },
+  {
+    "id": "armordurawarn",
+    "nameTr": "Zırh Uyarısı",
+    "descTr": "Zırhın kırılmak üzereyken ekranda uyarır.",
+    "category": "HUD",
+    "icon": "shield_alert"
+  },
+  {
+    "id": "lowhealth",
+    "nameTr": "Düşük Can Uyarısı",
+    "descTr": "Canın azalınca ekran kenarlarını kırmızıya boyar.",
+    "category": "HUD",
+    "icon": "heart_crack"
+  },
+  {
+    "id": "screenshotnotify",
+    "nameTr": "Ekran Görüntüsü Bildirimi",
+    "descTr": "Yeni ekran görüntüsü alınınca ekranın üstünde bildirir.",
+    "category": "HUD",
+    "icon": "camera"
+  },
+  {
+    "id": "saturation",
+    "nameTr": "Doygunluk Barı",
+    "descTr": "Gizli doygunluk (saturation) değerini bar olarak gösterir.",
+    "category": "HUD",
+    "icon": "apple"
+  },
+  {
+    "id": "minimap",
+    "nameTr": "Mini Harita",
+    "descTr": "Çevrenin arazisini gösteren küçük harita (varlık ve oyuncu göstermez).",
+    "category": "HUD",
+    "icon": "globe"
+  },
+  {
+    "id": "blockoutline",
+    "nameTr": "Blok Çerçevesi",
+    "descTr": "Baktığın bloğun çerçevesinin rengini ve kalınlığını değiştirir.",
+    "category": "Görsel",
+    "icon": "square_dashed"
+  },
+  {
+    "id": "hitcolor",
+    "nameTr": "Vuruş Rengi",
+    "descTr": "Hasar alan oyuncu ve mobların kırmızı parlamasını istediğin renge çevirir.",
+    "category": "Görsel",
+    "icon": "droplet"
+  },
+  {
+    "id": "lowfirevisual",
+    "nameTr": "Düşük Ateş",
+    "descTr": "Yanarken ekranı kaplayan ateşi aşağı indirir, görüşün açık kalır.",
+    "category": "Görsel",
+    "icon": "flame_low"
+  },
+  {
+    "id": "nohurtcam",
+    "nameTr": "Hasar Kamerası Kapalı",
+    "descTr": "Hasar alınca kameranın sallanmasını kapatır.",
+    "category": "Görsel",
+    "icon": "video_off"
+  },
+  {
+    "id": "camerabob",
+    "nameTr": "Kamera Sallanması",
+    "descTr": "Yürürken kameranın sallanma şiddetini ayarlar.",
+    "category": "Görsel",
+    "icon": "vibrate"
+  },
+  {
+    "id": "clouds",
+    "nameTr": "Bulut Ayarları",
+    "descTr": "Bulutların yüksekliğini, rengini ve hızını değiştirir.",
+    "category": "Görsel",
+    "icon": "cloud"
+  },
+  {
+    "id": "weather",
+    "nameTr": "Hava Durumu Değiştirici",
+    "descTr": "Yağmuru/fırtınayı sadece kendi ekranında açar veya kapatır.",
+    "category": "Görsel",
+    "icon": "cloud_rain"
+  },
+  {
+    "id": "timechanger",
+    "nameTr": "Zaman Değiştirici",
+    "descTr": "Oyun saatini sadece kendi ekranında değiştirir (sunucu etkilenmez).",
+    "category": "Görsel",
+    "icon": "sunrise"
+  },
+  {
+    "id": "particles",
+    "nameTr": "Partikül Çarpanı",
+    "descTr": "Parçacık (partikül) sayısını azaltarak ekranı sadeleştirir.",
+    "category": "Görsel",
+    "icon": "sparkles"
+  },
+  {
+    "id": "nametags",
+    "nameTr": "İsim Etiketleri",
+    "descTr": "İsim etiketlerinin görünme mesafesini ve davranışını ayarlar.",
+    "category": "Görsel",
+    "icon": "tag"
+  },
+  {
+    "id": "ownnametag",
+    "nameTr": "Kendi İsmini Göster",
+    "descTr": "Üçüncü şahıs kamerada kendi isim etiketini gösterir.",
+    "category": "Görsel",
+    "icon": "nameplate"
+  },
+  {
+    "id": "itemphysics",
+    "nameTr": "Eşya Fiziği",
+    "descTr": "Yere düşen düz eşyalar dönmek yerine yere yatar.",
+    "category": "Görsel",
+    "icon": "arrow_down_line"
+  },
+  {
+    "id": "anim17",
+    "nameTr": "1.7 Animasyonları",
+    "descTr": "Birinci şahıs el görünümüne 1.7'ye benzer görsel dokunuşlar ekler.",
+    "category": "Görsel",
+    "icon": "rewind"
+  },
+  {
+    "id": "helditem",
+    "nameTr": "El Pozisyonu",
+    "descTr": "Elindeki eşyanın ekrandaki yerini ve boyutunu ayarlar.",
+    "category": "Görsel",
+    "icon": "move"
+  },
+  {
+    "id": "itemsize",
+    "nameTr": "Eşya Büyüklüğü",
+    "descTr": "Yere düşen eşyaları büyütür veya küçültür.",
+    "category": "Görsel",
+    "icon": "maximize"
+  },
+  {
+    "id": "zoomplus",
+    "nameTr": "Zoom Geliştirmeleri",
+    "descTr": "Zoom'a tekerlek ile ayar ve sinematik kamera ekler.",
+    "category": "Görsel",
+    "icon": "zoom_plus"
+  },
+  {
+    "id": "nofog",
+    "nameTr": "Sis Kaldırma",
+    "descTr": "Uzak mesafedeki sisi kaldırır; mağara, lav ve karanlık sisine dokunmaz.",
+    "category": "Görsel",
+    "icon": "fog_off"
+  },
+  {
+    "id": "underwater",
+    "nameTr": "Su Altı Görüş",
+    "descTr": "Su altında daha net görmeni sağlar.",
+    "category": "Görsel",
+    "icon": "waves"
+  },
+  {
+    "id": "shieldscale",
+    "nameTr": "Kalkan Ölçeği",
+    "descTr": "Kalkanı küçültür ve alçaltır, görüşünü kapatmasın.",
+    "category": "Görsel",
+    "icon": "shield_double"
+  },
+  {
+    "id": "noshake",
+    "nameTr": "Ekran Sarsıntısı Yok",
+    "descTr": "Bulantı, portal ve hız efektlerinin ekranı oynatmasını kapatır.",
+    "category": "Görsel",
+    "icon": "vibrate_off"
+  },
+  {
+    "id": "totemanim",
+    "nameTr": "Totem Animasyonu",
+    "descTr": "Totem patlama animasyonunu küçültür veya gizler.",
+    "category": "Görsel",
+    "icon": "minimize"
+  },
+  {
+    "id": "glintcolor",
+    "nameTr": "Glint Rengi",
+    "descTr": "Büyülü eşyaların mor parıltısını istediğin renge çevirir.",
+    "category": "Görsel",
+    "icon": "gem"
+  },
+  {
+    "id": "reach",
+    "nameTr": "Reach Göstergesi",
+    "descTr": "Son vuruşunun mesafesini blok olarak gösterir (sadece gösterim).",
+    "category": "PvP",
+    "icon": "ruler"
+  },
+  {
+    "id": "hitcounter",
+    "nameTr": "Vuruş Sayacı",
+    "descTr": "Oturum boyunca verdiğin ve aldığın vuruşları sayar.",
+    "category": "PvP",
+    "icon": "fist"
+  },
+  {
+    "id": "damagepopup",
+    "nameTr": "Hasar Göstergesi",
+    "descTr": "Verdiğin hasarı vuruş anında yüzen yazı olarak gösterir.",
+    "category": "PvP",
+    "icon": "burst"
+  },
+  {
+    "id": "targethealth",
+    "nameTr": "Hedef Canı",
+    "descTr": "Vurduğun veya baktığın oyuncunun/varlığın canını gösterir.",
+    "category": "PvP",
+    "icon": "heart"
+  },
+  {
+    "id": "shieldstatus",
+    "nameTr": "Kalkan Durumu",
+    "descTr": "Kalkanın hazır, aktif veya beklemede olduğunu gösterir.",
+    "category": "PvP",
+    "icon": "shield"
+  },
+  {
+    "id": "bowcharge",
+    "nameTr": "Yay Şarj Göstergesi",
+    "descTr": "Yay, tatar yayı ve trident şarjını artı işaretinin altında gösterir.",
+    "category": "PvP",
+    "icon": "bolt"
+  },
+  {
+    "id": "killdeath",
+    "nameTr": "Öldürme / Ölme",
+    "descTr": "Oturumdaki öldürme, ölme sayını ve K/D oranını gösterir.",
+    "category": "PvP",
+    "icon": "sword"
+  },
+  {
+    "id": "potionwarn",
+    "nameTr": "İksir Bitiş Uyarısı",
+    "descTr": "İksir etkisi bitmek üzereyken ekranda uyarır.",
+    "category": "PvP",
+    "icon": "potion"
+  },
+  {
+    "id": "pearlcd",
+    "nameTr": "Ender İnci Beklemesi",
+    "descTr": "Ender inci, chorus meyvesi ve rüzgar topu bekleme sürelerini gösterir.",
+    "category": "PvP",
+    "icon": "pearl"
+  },
+  {
+    "id": "applecd",
+    "nameTr": "Elma Beklemesi",
+    "descTr": "Altın elma ve büyülü altın elma bekleme sürelerini gösterir (sunucuda varsa).",
+    "category": "PvP",
+    "icon": "star"
+  },
+  {
+    "id": "autogg",
+    "nameTr": "Otomatik GG",
+    "descTr": "Oyun bitince sohbete otomatik gg yazar.",
+    "category": "PvP",
+    "icon": "chat-check"
+  },
+  {
+    "id": "quickmsg",
+    "nameTr": "Hızlı Mesajlar",
+    "descTr": "Bir tuşa basınca önceden yazdığın mesajı veya komutu gönderir (5 makro).",
+    "category": "PvP",
+    "icon": "chat-bolt"
+  },
+  {
+    "id": "hitsound",
+    "nameTr": "Vuruş Sesi",
+    "descTr": "Vuruş yapınca seçtiğin ek sesi çalar.",
+    "category": "PvP",
+    "icon": "speaker"
+  },
+  {
+    "id": "critmult",
+    "nameTr": "Kritik Partikül Çarpanı",
+    "descTr": "Kritik vuruşlarda daha fazla partikül çıkarır (sadece görsel).",
+    "category": "PvP",
+    "icon": "sparkle"
+  },
+  {
+    "id": "entitydist",
+    "nameTr": "Varlık Çizim Mesafesi",
+    "descTr": "Uzaktaki varlıkların çizilmesini keserek FPS kazandırır.",
+    "category": "Performans",
+    "icon": "eye"
+  },
+  {
+    "id": "bedist",
+    "nameTr": "Blok Varlığı Mesafesi",
+    "descTr": "Uzaktaki sandık, tabela ve benzerlerinin çizimini keser.",
+    "category": "Performans",
+    "icon": "chest"
+  },
+  {
+    "id": "particlelimit",
+    "nameTr": "Partikül Sınırlayıcı",
+    "descTr": "Partikül sayısını ve mesafesini sınırlayarak FPS düşüşlerini önler.",
+    "category": "Performans",
+    "icon": "particles"
+  },
+  {
+    "id": "fastdead",
+    "nameTr": "Hızlı Ölüm Temizleme",
+    "descTr": "Ölen varlıkları hızlıca ekrandan kaldırır (sadece görsel).",
+    "category": "Performans",
+    "icon": "trash"
+  },
+  {
+    "id": "decorcull",
+    "nameTr": "Süs Varlıklarını Gizle",
+    "descTr": "Uzaktaki zırh askısı, eşya çerçevesi ve yerdeki eşyaları çizmez.",
+    "category": "Performans",
+    "icon": "frame"
+  },
+  {
+    "id": "noanim",
+    "nameTr": "Animasyonlu Doku Kapat",
+    "descTr": "Su, lav, ateş gibi animasyonlu dokuları durdurur veya yavaşlatır.",
+    "category": "Performans",
+    "icon": "film-off"
+  },
+  {
+    "id": "lightreduce",
+    "nameTr": "Işık Sadeleştirme",
+    "descTr": "Aydınlatma hesaplarını sadeleştirip FPS kazandırır (sadece görsel).",
+    "category": "Performans",
+    "icon": "bulb"
+  },
+  {
+    "id": "chatlimit",
+    "nameTr": "Sohbet Geçmişi Sınırı",
+    "descTr": "Sohbet geçmişini kısaltarak yoğun sunucularda FPS kazandırır.",
+    "category": "Performans",
+    "icon": "chat-limit"
+  },
+  {
+    "id": "memcleaner",
+    "nameTr": "Bellek Temizleyici",
+    "descTr": "RAM kullanımını gösterir; tuşla veya eşikte belleği temizler.",
+    "category": "Performans",
+    "icon": "chip"
+  },
+  {
+    "id": "bgfps",
+    "nameTr": "Arka Plan FPS Sınırı",
+    "descTr": "Oyun arka plandayken FPS'i düşürür, işlemci ve ekran kartını rahatlatır.",
+    "category": "Performans",
+    "icon": "window"
+  },
+  {
+    "id": "menufps",
+    "nameTr": "Menüde FPS Sınırı",
+    "descTr": "Envanter ve menüler açıkken FPS'i sınırlar, kapanınca eski ayarına döner.",
+    "category": "Performans",
+    "icon": "menu"
+  },
+  {
+    "id": "gfxkeys",
+    "nameTr": "Grafik Kısayolları",
+    "descTr": "Gölge, bulut, partikül ve görüş mesafesi için hızlı tuşlar.",
+    "category": "Performans",
+    "icon": "palette"
+  },
+  {
+    "id": "chunkinfo",
+    "nameTr": "Chunk Bilgisi",
+    "descTr": "Yüklenen ve çizilen chunk sayısını, çizim kuyruğunu gösterir.",
+    "category": "Performans",
+    "icon": "grid"
+  },
+  {
+    "id": "friends",
+    "nameTr": "Arkadaş Vurgulama",
+    "descTr": "Arkadaşlarının adını sohbette ve oyuncu listesinde renklendirir.",
+    "category": "Sosyal",
+    "icon": "users"
+  },
+  {
+    "id": "voicehud",
+    "nameTr": "Ses HUD",
+    "descTr": "Ses odandaki oyuncuların kafalarını alt alta gösterir; konuşan kişinin kafası mavi parlar.",
+    "category": "Sosyal",
+    "icon": "mic"
+  },
+  {
+    "id": "mention",
+    "nameTr": "Bahsetme Bildirimi",
+    "descTr": "Sohbette adın geçince ses çalar ve satırı vurgular.",
+    "category": "Sosyal",
+    "icon": "at"
+  },
+  {
+    "id": "chatfilter",
+    "nameTr": "Sohbet Filtresi",
+    "descTr": "Belirlediğin sözcükleri içeren mesajları gizler veya yıldızlar.",
+    "category": "Sosyal",
+    "icon": "filter"
+  },
+  {
+    "id": "dmnotify",
+    "nameTr": "Özel Mesaj Bildirimi",
+    "descTr": "Sana özel mesaj gelince ses çalar ve uyarır.",
+    "category": "Sosyal",
+    "icon": "mail"
+  },
+  {
+    "id": "discordkeys",
+    "nameTr": "Discord Kısayolları",
+    "descTr": "Discord durumunu tuşlarla aç/kapat, sunucu adresini veya süreyi gizle.",
+    "category": "Sosyal",
+    "icon": "discord"
+  },
+  {
+    "id": "shotclip",
+    "nameTr": "Ekran Görüntüsü Panosu",
+    "descTr": "Ekran görüntüsünü otomatik panoya kopyalar, istersen ek klasöre de kaydeder.",
+    "category": "Sosyal",
+    "icon": "save"
+  },
+  {
+    "id": "chattime",
+    "nameTr": "Sohbet Saati",
+    "descTr": "Sohbet mesajlarının başına saat ekler.",
+    "category": "Sosyal",
+    "icon": "dots"
+  },
+  {
+    "id": "joinalert",
+    "nameTr": "Giriş / Çıkış Bildirimi",
+    "descTr": "Takip ettiğin oyuncular sunucuya girince veya çıkınca haber verir.",
+    "category": "Sosyal",
+    "icon": "door"
+  },
+  {
+    "id": "autowalk",
+    "nameTr": "Otomatik Yürüme",
+    "descTr": "Tuşa basınca ileri yürür (sadece tek oyunculu dünyada çalışır).",
+    "category": "Diğer",
+    "icon": "walk"
+  },
+  {
+    "id": "quickprofiles",
+    "nameTr": "Hızlı Ayar Profilleri",
+    "descTr": "Görüntü ayarlarını 3 profile kaydet, tek tuşla geri yükle.",
+    "category": "Diğer",
+    "icon": "sliders"
+  },
+  {
+    "id": "senseprofiles",
+    "nameTr": "Hassasiyet Profilleri",
+    "descTr": "Fare hassasiyetini tek tuşla önceden ayarlı değerlere çevirir.",
+    "category": "Diğer",
+    "icon": "mouse"
+  },
+  {
+    "id": "shotfolder",
+    "nameTr": "Ekran Görüntüsü Klasörü",
+    "descTr": "Tek tuşla ekran görüntüleri klasörünü açar.",
+    "category": "Diğer",
+    "icon": "folder"
+  },
+  {
+    "id": "alarm",
+    "nameTr": "Saat Alarmı",
+    "descTr": "Belirlediğin saatte ses ve mesajla seni uyarır.",
+    "category": "Diğer",
+    "icon": "alarm"
+  },
+  {
+    "id": "stopwatch",
+    "nameTr": "Zamanlayıcı / Kronometre",
+    "descTr": "Ekranda kronometre veya geri sayım zamanlayıcısı gösterir.",
+    "category": "Diğer",
+    "icon": "timer"
+  },
+  {
+    "id": "notepad",
+    "nameTr": "Not Defteri",
+    "descTr": "Kendi notlarını ekranda gösterir (ör: yapılacaklar, koordinat, kurallar).",
+    "category": "Diğer",
+    "icon": "note"
+  },
+  {
+    "id": "waypoints",
+    "nameTr": "Koordinat Kaydedici",
+    "descTr": "Koordinatları kaydeder ve en yakınlarını mesafeyle listeler (sadece metin).",
+    "category": "Diğer",
+    "icon": "pin"
+  },
+  {
+    "id": "deathpoint",
+    "nameTr": "Ölüm Noktası Kaydedici",
+    "descTr": "Öldüğünde koordinatlarını sohbete yazar.",
+    "category": "Diğer",
+    "icon": "skull-pin"
+  },
+  {
+    "id": "autoreconnect",
+    "nameTr": "Otomatik Yeniden Bağlan",
+    "descTr": "Sunucudan düşünce geri sayım yapıp aynı sunucuya tekrar girer.",
+    "category": "Diğer",
+    "icon": "refresh"
+  },
+  {
+    "id": "pingrefresh",
+    "nameTr": "Sunucu Ping Yenileme",
+    "descTr": "Sunucu listesi açıkken ping ve oyuncu sayılarını kendiliğinden yeniler.",
+    "category": "Diğer",
+    "icon": "signal"
+  },
+  {
+    "id": "customkeys",
+    "nameTr": "Tuş Göstergesi Düzenleyici",
+    "descTr": "Göstermek istediğin tuşları, sütun sayısını ve boyutu kendin seç.",
+    "category": "Diğer",
+    "icon": "keys"
+  },
+  {
+    "id": "f3simple",
+    "nameTr": "F3 Sadeleştirme",
+    "descTr": "F3 ekranını sadeleştirir; koordinat, biyom ve chunk ayrıntılarını gizler.",
+    "category": "Diğer",
+    "icon": "bug"
+  }
+]

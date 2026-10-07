@@ -1,0 +1,147 @@
+/* VanillaTurkey Mobile — phone/tablet layout on top of launcher/src/glass.css.
+   Target: landscape phones (≈ 640–930 × 320–430 CSS px), 44 px touch targets, one scroll axis per screen. */
+:root { --vt-top: 54px; --vt-pad: 10px; --vt-tap: 44px; }
+html, body { overscroll-behavior: none; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+body.vt-mobile { user-select: none; -webkit-user-select: none; font-size: 14px; }
+body.vt-mobile * { -webkit-touch-callout: none; }
+body.vt-mobile input, body.vt-mobile textarea { user-select: text; -webkit-user-select: text; font-size: 16px; }
+
+/* window chrome that makes no sense on a phone */
+body.vt-mobile .winctl, body.vt-mobile .footer-ver, body.vt-mobile .bg-chip, body.vt-mobile .drag > .winctl { display: none !important; }
+body.vt-mobile .titlebar, body.vt-mobile .tbar { display: none !important; }
+
+/* ---- top bar: slim, icons only (label of the active tab stays) ---- */
+body.vt-mobile .topbar { top: max(env(safe-area-inset-top), 6px); left: max(env(safe-area-inset-left), var(--vt-pad)); right: max(env(safe-area-inset-right), var(--vt-pad)); height: 44px; gap: 8px; grid-template-columns: auto 1fr auto; }
+body.vt-mobile .brand-chip { height: 44px; padding: 0 10px; font-size: 0; gap: 0; }
+body.vt-mobile .brand-chip .chip-sym { margin: 0; }
+body.vt-mobile .nav-pill { height: 44px; padding: 3px; justify-self: center; overflow-x: auto; scrollbar-width: none; max-width: 100%; }
+body.vt-mobile .nav-pill::-webkit-scrollbar { display: none; }
+body.vt-mobile .nav-btn { height: 38px; min-width: 44px; padding: 0 11px; font-size: 13px; justify-content: center; gap: 6px; flex: none; }
+body.vt-mobile .nav-btn:not(.on) { font-size: 0; gap: 0; padding: 0 12px; }
+body.vt-mobile .tb-right { gap: 6px; }
+body.vt-mobile .user-chip { height: 44px; padding: 0 8px 0 5px; font-size: 0; gap: 4px; }
+body.vt-mobile .user-chip svg:last-child { display: none; }
+body.vt-mobile .vbtn-top { height: 44px; padding: 0 12px; font-size: 0; gap: 0; }
+body.vt-mobile .vbtn-top.live { font-size: 12px; gap: 6px; }
+body.vt-mobile .coin-pill { height: 44px; }
+body.vt-mobile .user-menu { min-width: 230px; }
+body.vt-mobile .user-menu button { height: var(--vt-tap); }
+
+/* ---- pages scroll as a whole ---- */
+body.vt-mobile .page { top: calc(max(env(safe-area-inset-top), 6px) + 52px); left: max(env(safe-area-inset-left), var(--vt-pad)); right: max(env(safe-area-inset-right), var(--vt-pad)); bottom: max(env(safe-area-inset-bottom), 6px); }
+body.vt-mobile .page.scroll, body.vt-mobile .page { overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; padding-right: 0; scrollbar-width: none; }
+body.vt-mobile .page::-webkit-scrollbar { display: none; }
+body.vt-mobile .page-inner { max-width: none; }
+body.vt-mobile .page-title h1 { font-size: 20px; }
+body.vt-mobile .page-title p { font-size: 12.5px; }
+body.vt-mobile .page-title { margin-bottom: 10px; flex-wrap: wrap; }
+
+/* ---- touch targets ---- */
+body.vt-mobile .btn-glass, body.vt-mobile .btn-primary, body.vt-mobile .btn-danger { min-height: var(--vt-tap); }
+body.vt-mobile .btn-glass.sm, body.vt-mobile .btn-primary.sm { min-height: 40px; padding-left: 14px; padding-right: 14px; }
+body.vt-mobile .input, body.vt-mobile select { min-height: var(--vt-tap); }
+body.vt-mobile .icon-btn { min-width: 40px; min-height: 40px; }
+body.vt-mobile .tab, body.vt-mobile .chip, body.vt-mobile .seg button { min-height: 38px; }
+
+/* ---- home: stage + OYNA on the left, cards scroll on the right ---- */
+body.vt-mobile .home { position: absolute; inset: 0; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); grid-template-rows: auto auto; align-content: start; gap: 10px 12px; overflow-y: auto; overflow-x: hidden; scrollbar-width: none; }
+body.vt-mobile .home::-webkit-scrollbar { display: none; }
+body.vt-mobile .home > .center { grid-column: 1; grid-row: 1 / span 2; position: sticky; top: 0; height: calc(100vh - 66px - env(safe-area-inset-top)); min-height: 250px; align-self: start; }
+body.vt-mobile .home > .col:first-child { grid-column: 2; grid-row: 1; }
+body.vt-mobile .home > .col:last-child { grid-column: 2; grid-row: 2; padding-bottom: 12px; }
+body.vt-mobile .stage-wrap { max-width: none; }
+body.vt-mobile .play-wrap { max-width: none; padding-top: 4px; gap: 6px; }
+body.vt-mobile .play-btn { height: 56px; font-size: 20px; }
+body.vt-mobile .play-btn .play-label { font-size: 20px; }
+body.vt-mobile .profile-pill { height: 44px; }
+body.vt-mobile .stage-chips-top { gap: 6px; flex-wrap: wrap; }
+body.vt-mobile .stage-chips-top > * { height: 34px; padding: 0 12px; font-size: 12px; }
+body.vt-mobile .col { gap: 10px; }
+body.vt-mobile .news-card { min-height: 130px; max-height: 190px; }
+body.vt-mobile .friends-card { min-height: 130px; }
+body.vt-mobile .cape-tile { padding: 8px 6px; }
+
+/* ---- skin / cosmetics / friends / mods / profiles: stack instead of fixed columns ---- */
+body.vt-mobile .fr-grid { grid-template-columns: 1fr; }
+body.vt-mobile .friends-page { max-width: none; height: auto; }
+body.vt-mobile .fr-side, body.vt-mobile .fr-main-card { overflow: visible; }
+body.vt-mobile .grid { grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 8px; overflow: visible; }
+body.vt-mobile .skin-right { overflow: visible; }
+
+/* ---- launch splash / install progress ---- */
+body.vt-mobile .launch-splash .center-stack { transform: scale(.8); transform-origin: center; }
+body.vt-mobile .glass-prog { width: min(86vw, 420px); }
+
+/* ---- dialogs ---- */
+body.vt-mobile .modal, body.vt-mobile .dlg { max-width: 92vw; max-height: 92vh; overflow-y: auto; }
+
+@media (max-height: 420px) {
+  body.vt-mobile .page-title { margin-bottom: 6px; }
+  body.vt-mobile .page-title h1 { font-size: 18px; }
+}
+@media (min-width: 1000px) and (min-height: 600px) {
+  /* tablets: keep the desktop proportions, just with bigger touch targets */
+  body.vt-mobile .home { grid-template-columns: 322px minmax(0, 1fr) 322px; overflow: hidden; }
+  body.vt-mobile .home > .center, body.vt-mobile .home > .col:first-child, body.vt-mobile .home > .col:last-child { grid-column: auto; grid-row: auto; position: relative; height: auto; }
+  body.vt-mobile .nav-btn:not(.on) { font-size: 14px; gap: 8px; padding: 0 16px; }
+  body.vt-mobile .brand-chip { font-size: 14.5px; gap: 9px; padding: 0 16px 0 8px; }
+}
+
+.vt-unofficial { position: fixed; z-index: 3; left: 0; right: 0; bottom: 1px; text-align: center; font-size: 9px; line-height: 11px; color: rgba(255,255,255,.62); pointer-events: none; text-shadow: 0 1px 3px rgba(0,0,0,.6); }
+
+/* ---- floating phone-settings button + sheet ---- */
+.vt-gear { position: fixed; z-index: 60; left: calc(max(env(safe-area-inset-left), 10px) + 52px); top: max(env(safe-area-inset-top), 6px); width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; color: #fff; background: rgba(20,32,52,.55); border: 1px solid rgba(255,255,255,.35); backdrop-filter: blur(14px); box-shadow: 0 6px 20px rgba(0,0,0,.3); }
+.vt-sheet-wrap { position: fixed; inset: 0; z-index: 200; display: grid; place-items: center; background: rgba(8,16,30,.55); }
+.vt-sheet { width: min(92vw, 560px); max-height: 92vh; display: flex; flex-direction: column; border-radius: 22px; padding: 12px 14px; background: rgba(28,40,60,.78); border: 1px solid rgba(255,255,255,.3); backdrop-filter: blur(24px) saturate(1.4); box-shadow: 0 20px 60px rgba(0,0,0,.5); }
+.vt-sheet-head { display: flex; align-items: center; justify-content: space-between; padding: 2px 4px 8px; font-size: 16px; }
+.vt-sheet-body { overflow-y: auto; scrollbar-width: none; display: flex; flex-direction: column; gap: 10px; padding-bottom: 6px; }
+.vt-sheet-body section { padding: 8px 10px; border-radius: 16px; background: rgba(255,255,255,.07); }
+.vt-sheet-body h4 { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.7); margin: 2px 2px 6px; }
+.vt-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 48px; padding: 4px 2px; font-size: 14px; }
+.vt-row > span { flex: 1; min-width: 0; } .vt-row small { display: block; font-size: 11.5px; color: rgba(255,255,255,.65); margin-top: 2px; line-height: 1.3; }
+.vt-row input[type=checkbox] { width: 26px; height: 26px; accent-color: #2ec5f5; flex: none; }
+.vt-select { min-height: 40px; max-width: 46%; border-radius: 12px; background: rgba(255,255,255,.14); color: #fff; border: 1px solid rgba(255,255,255,.3); padding: 0 8px; font-size: 14px; }
+.vt-select option { color: #111; }
+.vt-legal { font-size: 11px; color: rgba(255,255,255,.6); line-height: 1.4; padding: 6px 2px 2px; }
+
+/* ---- cosmetics (kos): compact, internal scroll ---- */
+body.vt-mobile .page:has(> .kos) { overflow: hidden; }
+body.vt-mobile .kos { max-height: none; padding: 8px 10px 6px; border-radius: 16px; }
+body.vt-mobile .kos-head p { display: none; }
+body.vt-mobile .kos-head h2 { font-size: 17px; }
+body.vt-mobile .kos-body { grid-template-columns: minmax(0, 1fr) 196px; gap: 10px; margin-top: 6px; }
+body.vt-mobile .kos-tabs { flex-wrap: nowrap; overflow-x: auto; max-width: 100%; scrollbar-width: none; }
+body.vt-mobile .kos-tabs::-webkit-scrollbar { display: none; }
+body.vt-mobile .kos-tabs button { height: 36px; padding: 0 12px; flex: none; }
+body.vt-mobile .kos-bar { flex-wrap: wrap; gap: 6px; }
+body.vt-mobile .kos-bar .input { width: 150px; height: 40px; min-height: 40px; }
+body.vt-mobile .kos-lockf button { height: 30px; }
+body.vt-mobile .kos-grid { grid-template-columns: repeat(auto-fill, minmax(86px, 1fr)); }
+body.vt-mobile .kos-foot { height: auto; min-height: 38px; margin-top: 4px; padding-top: 4px; flex-wrap: wrap; gap: 8px; }
+body.vt-mobile .kos-tip { display: none; }
+body.vt-mobile .kos-stage { padding-top: 60px; }
+body.vt-mobile .kos-clear { height: 36px; }
+body.vt-mobile .kos { position: relative; }
+body.vt-mobile .kos-head { position: absolute; top: 6px; right: 10px; z-index: 6; }
+body.vt-mobile .kos-head h2 { display: none; }
+body.vt-mobile .kos-body { margin-top: 0; }
+body.vt-mobile .kos-prev { margin-top: 48px; }
+body.vt-mobile .kos-bar b, body.vt-mobile .kos-bar > span { display: none; }
+body.vt-mobile .kos-bar { flex-wrap: nowrap; }
+body.vt-mobile .kos-bar .input { width: 130px; flex: none; margin-left: auto; }
+body.vt-mobile .kos-lockf { margin-left: 0; }
+body.vt-mobile .kos-tabs button { font-size: 12.5px; height: 34px; }
+
+/* ---- login / splash: logo left, card right, scrollable ---- */
+body.vt-mobile .login { overflow-y: auto; align-items: start; }
+body.vt-mobile .login .center-stack { flex-direction: row; gap: 22px; width: 100%; min-height: 100%; padding: 10px max(env(safe-area-inset-right), 18px) 16px max(env(safe-area-inset-left), 18px); justify-content: center; align-items: center; box-sizing: border-box; }
+body.vt-mobile .login .vt-lockup { flex: 0 1 44%; display: flex; flex-direction: column; align-items: center; min-width: 0; }
+body.vt-mobile .login .vt-word { width: 100% !important; max-width: 340px; height: auto; }
+body.vt-mobile .login .vt-sub { width: 46% !important; max-width: 150px; height: auto; }
+body.vt-mobile .login-card { width: min(420px, 52vw); padding: 16px 18px 14px; gap: 9px; border-radius: 22px; flex: none; }
+body.vt-mobile .login-card h2 { font-size: 18px; }
+body.vt-mobile .login-card .field span { font-size: 11px; }
+body.vt-mobile .login .input.lg { height: 44px; }
+body.vt-mobile .login .btn-primary.lg, body.vt-mobile .login .btn-ms { min-height: 46px; }
+body.vt-mobile .login-ver { display: none; }
+body.vt-mobile .splash .vt-word { max-width: 300px; }

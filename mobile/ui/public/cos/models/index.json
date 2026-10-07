@@ -1,0 +1,3109 @@
+{
+ "format": 1,
+ "items": [
+  {
+   "id": "hat_crown_gold",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Altın Taç",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_crown_silver",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Gümüş Taç",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_crown_ruby",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Yakut Taç",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "hat_crown_emerald",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Zümrüt Taç",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "hat_crown_sapphire",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Safir Taç",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "hat_crown_ice",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Buz Tacı",
+   "rarity": "legendary",
+   "price": 400
+  },
+  {
+   "id": "hat_crown_obsidian",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Obsidyen Taç",
+   "rarity": "legendary",
+   "price": 400
+  },
+  {
+   "id": "hat_crown_blue",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "VanillaTurkey Tacı",
+   "rarity": "legendary",
+   "price": 400
+  },
+  {
+   "id": "hat_ay_yildiz",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Ay Yıldız Tacı",
+   "rarity": "legendary",
+   "price": 400
+  },
+  {
+   "id": "hat_wizard_purple",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Mor Büyücü Şapkası",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_wizard_blue",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Mavi Büyücü Şapkası",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_wizard_red",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Kızıl Büyücü Şapkası",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_wizard_green",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Yeşil Büyücü Şapkası",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_wizard_black",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Kara Büyücü Şapkası",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "hat_wizard_white",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Beyaz Büyücü Şapkası",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "hat_halo_gold",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Altın Hale",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "hat_halo_white",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Beyaz Hale",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "hat_halo_blue",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Mavi Hale",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "hat_halo_red",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Kızıl Hale",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "hat_halo_green",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Zümrüt Hale",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "hat_halo_purple",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Mor Hale",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "hat_horns_devil",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Şeytan Boynuzları",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "hat_horns_black",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Kara Boynuzlar",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "hat_horns_gold",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Altın Boynuzlar",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "hat_horns_ram",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Koç Boynuzları",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "hat_horns_dragon",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Ejderha Boynuzları",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "hat_horns_ice",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Buz Boynuzları",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "hat_unicorn",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Tek Boynuz",
+   "rarity": "legendary",
+   "price": 400
+  },
+  {
+   "id": "hat_antlers",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Geyik Boynuzu",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_ears_cat_black",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Kara Kedi Kulakları",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_ears_cat_white",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Beyaz Kedi Kulakları",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_ears_cat_orange",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Turuncu Kedi Kulakları",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_ears_bunny",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Tavşan Kulakları",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_ears_bear",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Ayı Kulakları",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "hat_ears_wolf",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Kurt Kulakları",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_ears_fox",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Tilki Kulakları",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_ears_mouse",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Fare Kulakları",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "hat_top_black",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Silindir Şapka",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "hat_top_white",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Beyaz Silindir",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "hat_top_blue",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Mavi Silindir",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_top_gold",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Altın Silindir",
+   "rarity": "legendary",
+   "price": 400
+  },
+  {
+   "id": "hat_top_magic",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Sihirbaz Silindiri",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "hat_bowler",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Melon Şapka",
+   "rarity": "common",
+   "price": 0
+  },
+  {
+   "id": "hat_fedora_brown",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Kahverengi Fötr",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "hat_fedora_black",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Kara Fötr",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_fedora_white",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Beyaz Fötr",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_cowboy_brown",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Kovboy Şapkası",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "hat_cowboy_white",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Beyaz Kovboy Şapkası",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "hat_cowboy_black",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Kara Kovboy Şapkası",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "hat_sombrero",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Sombrero",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_party_blue",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Parti Şapkası",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "hat_party_pink",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Pembe Parti Şapkası",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "hat_santa",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Noel Baba Şapkası",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "hat_beanie_blue",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Mavi Bere",
+   "rarity": "common",
+   "price": 0
+  },
+  {
+   "id": "hat_beanie_red",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Kırmızı Bere",
+   "rarity": "common",
+   "price": 0
+  },
+  {
+   "id": "hat_beanie_gray",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Gri Bere",
+   "rarity": "common",
+   "price": 0
+  },
+  {
+   "id": "hat_beanie_tr",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Türk Bayrağı Bere",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_cap_blue",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Mavi Kep",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "hat_cap_red",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Kırmızı Kep",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "hat_cap_black",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Kara Kep",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "hat_chef",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Aşçı Şapkası",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_pirate",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Korsan Şapkası",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "hat_captain",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Kaptan Şapkası",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_police",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Polis Şapkası",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_graduation",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Mezuniyet Kepi",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_pilot",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Pilot Başlığı",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "hat_straw",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Hasır Şapka",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "hat_fez",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Fes",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "hat_kalpak",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Kalpak",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "hat_beret_red",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Kırmızı Beret",
+   "rarity": "common",
+   "price": 0
+  },
+  {
+   "id": "hat_beret_black",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Kara Beret",
+   "rarity": "common",
+   "price": 0
+  },
+  {
+   "id": "hat_hardhat",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Baret",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "hat_viking",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Viking Miğferi",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "hat_knight",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Şövalye Miğferi",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "hat_kabuto",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Samuray Kabuto",
+   "rarity": "legendary",
+   "price": 400
+  },
+  {
+   "id": "hat_spartan",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Spartalı Miğferi",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "hat_propeller",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Pervaneli Bere",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_pumpkin",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Balkabağı",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "hat_mushroom",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Mantar Şapka",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_icecream",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Dondurma",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_cake",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Pasta",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "hat_headphones_black",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Kulaklık",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "hat_headphones_blue",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Mavi Kulaklık",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_headphones_pink",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Pembe Kulaklık",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_flower_crown",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Çiçek Tacı",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_laurel",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Defne Çelengi",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "hat_tiara",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Elmas Tiara",
+   "rarity": "legendary",
+   "price": 400
+  },
+  {
+   "id": "hat_ninja_band",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Ninja Bandı",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_cone",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Trafik Konisi",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "hat_duck",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Lastik Ördek",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_antenna",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Anten",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "hat_bozkurt",
+   "slot": "hat",
+   "bone": "head",
+   "nameTr": "Bozkurt Başlığı",
+   "rarity": "legendary",
+   "price": 400
+  },
+  {
+   "id": "mask_shades_black",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Siyah Güneş Gözlüğü",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "mask_shades_red",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Kırmızı Gözlük",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "mask_shades_blue",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Mavi Ayna Gözlük",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "mask_aviator",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Aviator Gözlük",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "mask_round",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Yuvarlak Gözlük",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "mask_nerd",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "İnek Gözlüğü",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "mask_neon",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Neon Gözlük",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "mask_star",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Yıldız Gözlük",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "mask_ski",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Kayak Gözlüğü",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "mask_deal_with_it",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Deal With It",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "mask_heart_glasses",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Kalpli Gözlük",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "mask_monocle",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Monokl",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "mask_3d",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "3D Gözlük",
+   "rarity": "common",
+   "price": 0
+  },
+  {
+   "id": "mask_steampunk",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Buhar Gözlüğü",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "mask_cyber_visor",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Siber Vizör",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "mask_vr",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "VR Başlık",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "mask_scuba",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Dalış Maskesi",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "mask_ninja",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Ninja Maskesi",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "mask_hockey",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Hokey Maskesi",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "mask_surgical",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Cerrahi Maske",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "mask_bandana_red",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Kırmızı Bandana",
+   "rarity": "common",
+   "price": 0
+  },
+  {
+   "id": "mask_bandana_blue",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Mavi Bandana",
+   "rarity": "common",
+   "price": 0
+  },
+  {
+   "id": "mask_bandana_tr",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Ay Yıldız Bandana",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "mask_domino",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Domino Maskesi",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "mask_venetian",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Venedik Maskesi",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "mask_anonymous",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Anonim Maskesi",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "mask_oni",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Oni Maskesi",
+   "rarity": "legendary",
+   "price": 400
+  },
+  {
+   "id": "mask_skull",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Kuru Kafa Maskesi",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "mask_clown",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Palyaço Maskesi",
+   "rarity": "common",
+   "price": 0
+  },
+  {
+   "id": "mask_cat_face",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Kedi Yüzü",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "mask_vampire",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Vampir Dişleri",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "mask_robot",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Robot Yüzü",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "mask_warpaint",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Savaş Boyası",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "mask_blush",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Kızarma",
+   "rarity": "common",
+   "price": 0
+  },
+  {
+   "id": "mask_scar",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Savaş Yarası",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "mask_tears",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Gözyaşları",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "mask_mustache",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Bıyık",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "mask_santa_beard",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Noel Sakalı",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "mask_eyepatch",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Göz Bandı",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "mask_clown_nose",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Palyaço Burnu",
+   "rarity": "common",
+   "price": 0
+  },
+  {
+   "id": "mask_plague",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Veba Doktoru",
+   "rarity": "legendary",
+   "price": 400
+  },
+  {
+   "id": "mask_gas",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Gaz Maskesi",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "mask_laser_eyes",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Lazer Gözler",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "mask_bunny",
+   "slot": "mask",
+   "bone": "head",
+   "nameTr": "Tavşan Yüzü",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "body_scarf_red",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Kırmızı Atkı",
+   "rarity": "common",
+   "price": 0
+  },
+  {
+   "id": "body_scarf_tr",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Türk Atkısı",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "body_scarf_blue",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Mavi Atkı",
+   "rarity": "common",
+   "price": 0
+  },
+  {
+   "id": "body_scarf_rainbow",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Gökkuşağı Atkısı",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "body_scarf_black",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Kara Atkı",
+   "rarity": "common",
+   "price": 0
+  },
+  {
+   "id": "body_scarf_green",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Yeşil Atkı",
+   "rarity": "common",
+   "price": 0
+  },
+  {
+   "id": "body_pauldron_gold",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Altın Omuzluk",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "body_pauldron_iron",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Demir Omuzluk",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "body_pauldron_diamond",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Elmas Omuzluk",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "body_pauldron_obsidian",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Obsidyen Omuzluk",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "body_pauldron_ice",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Buz Omuzluk",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "body_pack_leather",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Deri Sırt Çantası",
+   "rarity": "common",
+   "price": 0
+  },
+  {
+   "id": "body_pack_jet",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Roket Çantası",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "body_quiver",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Ok Kılıfı",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "body_sword_back",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Sırttaki Kılıç",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "body_shield_back",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Sırttaki Kalkan",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "body_guitar",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Gitar",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "body_battery",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Enerji Paketi",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "body_tail_fox",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Tilki Kuyruğu",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "body_tail_cat",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Kedi Kuyruğu",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "body_tail_dragon",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Ejderha Kuyruğu",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "body_tail_devil",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Şeytan Kuyruğu",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "body_tail_wolf",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Kurt Kuyruğu",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "body_armor_knight",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Şövalye Zırhı",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "body_armor_gold",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Altın Zırh",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "body_armor_ice",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Buz Zırhı",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "body_armor_obsidian",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Obsidyen Zırh",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "body_armor_roman",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Roma Zırhı",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "body_armor_lava",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Lav Zırhı",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "body_armor_robot",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Robot Gövdesi",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "body_armor_bone",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "İskelet Gövde",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "body_vest_tux",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Smokin Yeleği",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "body_tie_blue",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Mavi Kravat",
+   "rarity": "common",
+   "price": 0
+  },
+  {
+   "id": "body_reactor",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Ark Reaktörü",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "body_medal",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Madalya",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "body_float_ring",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Can Simidi",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "body_belt",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Alet Kemeri",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "body_bandolier",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Fişeklik",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "body_lei",
+   "slot": "body",
+   "bone": "body",
+   "nameTr": "Çiçek Kolyesi",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "imza",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "İmza",
+   "rarity": "legendary",
+   "price": 100
+  },
+  {
+   "id": "renklerin",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Senin Renklerin",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "cape_vt",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "VanillaTurkey Pelerini",
+   "rarity": "legendary",
+   "price": 0
+  },
+  {
+   "id": "cape_vt_navy",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "VanillaTurkey Gece",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "cape_vt_ice",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "VanillaTurkey Buz",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "cape_vt_royal",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "VanillaTurkey Kraliyet",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "cape_vt_neon",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "VanillaTurkey Neon",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "cape_vt_stripes",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "VanillaTurkey Şerit",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "cape_flag_tr",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Türk Bayrağı",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "cape_flag_az",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Azerbaycan Bayrağı",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "cape_flag_de",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Almanya Bayrağı",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "cape_flag_fr",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Fransa Bayrağı",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "cape_flag_it",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "İtalya Bayrağı",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "cape_flag_nl",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Hollanda Bayrağı",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "cape_flag_br",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Brezilya Bayrağı",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "cape_flag_jp",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Japonya Bayrağı",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "cape_flag_ar",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Arjantin Bayrağı",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "cape_flag_se",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "İsveç Bayrağı",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "cape_flag_es",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "İspanya Bayrağı",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "cape_flag_gb",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Birleşik Krallık Bayrağı",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "cape_fire",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Alev Pelerini",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "cape_lava",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Lav Pelerini",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "cape_ice",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Buz Pelerini",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "cape_ocean",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Okyanus Pelerini",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "cape_electric",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Yıldırım Pelerini",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "cape_rock",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Kaya Pelerini",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "cape_clouds",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Bulut Pelerini",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "cape_nature",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Orman Pelerini",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "cape_shadow",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Gölge Pelerini",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "cape_light",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Işık Pelerini",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "cape_galaxy",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Galaksi Pelerini",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "cape_nebula",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Nebula Pelerini",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "cape_aurora",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Aurora Pelerini",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "cape_void",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Boşluk Pelerini",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "cape_marble",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Mermer Pelerini",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "cape_gold",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Altın Brokar",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "cape_silver",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Gümüş Zincir",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "cape_obsidian",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Obsidyen Pelerini",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "cape_diamond",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Elmas Pelerini",
+   "rarity": "legendary",
+   "price": 400
+  },
+  {
+   "id": "cape_emerald",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Zümrüt Pelerini",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "cape_ruby",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Yakut Pelerini",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "cape_amethyst",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Ametist Pelerini",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "cape_netherite",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Netherit Pelerini",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "cape_copper",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Bakır Pelerini",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "cape_wood",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Meşe Pelerini",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "cape_rainbow",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Gökkuşağı",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "cape_tiedye",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Batik",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "cape_plaid_red",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Kırmızı Ekose",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "cape_plaid_blue",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Mavi Ekose",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "cape_argyle",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Argyle",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "cape_houndstooth",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Kaz Ayağı",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "cape_race",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Yarış Bayrağı",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "cape_camo_green",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Orman Kamuflajı",
+   "rarity": "common",
+   "price": 0
+  },
+  {
+   "id": "cape_camo_desert",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Çöl Kamuflajı",
+   "rarity": "common",
+   "price": 0
+  },
+  {
+   "id": "cape_camo_snow",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Kar Kamuflajı",
+   "rarity": "common",
+   "price": 0
+  },
+  {
+   "id": "cape_leopard",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Leopar",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "cape_tiger",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Kaplan",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "cape_zebra",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Zebra",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "cape_snake",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Yılan Derisi",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "cape_honey",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Petek",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "cape_polka",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Puantiyeli",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "cape_chevron",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Şevron",
+   "rarity": "common",
+   "price": 0
+  },
+  {
+   "id": "cape_pastel",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Pastel",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "cape_matrix",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Matrix",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "cape_synthwave",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Synthwave",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "cape_circuit",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Devre Kartı",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "cape_glitch",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Glitch",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "cape_creeper",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Creeper",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "cape_ender",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Ender",
+   "rarity": "rare",
+   "price": 50
+  },
+  {
+   "id": "cape_pumpkin",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Balkabağı",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "cape_pirate",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Korsan",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "cape_knight",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Şövalye",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "cape_royal",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Kraliyet",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "cape_ninja",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Ninja",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "cape_samurai",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Samuray",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "cape_dragon",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Ejderha Pulu",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "cape_angel",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Melek",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "cape_devil",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Şeytan",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "cape_sakura",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Sakura",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "cape_snowflake",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Kar Tanesi",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "cape_hearts",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Kalpler",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "cape_stars",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Yıldızlı Gece",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "cape_moon",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Ay Işığı",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "cape_sunset",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Gün Batımı",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "cape_desert",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Çöl",
+   "rarity": "common",
+   "price": 0
+  },
+  {
+   "id": "cape_forest",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Dağ Ormanı",
+   "rarity": "common",
+   "price": 0
+  },
+  {
+   "id": "cape_waves",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Dalga",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "cape_plain_black",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Siyah Pelerin",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "cape_plain_red",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Kızıl Pelerin",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "cape_plain_blue",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Kraliyet Mavisi Pelerin",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "cape_plain_green",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Zümrüt Yeşili Pelerin",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "cape_plain_purple",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Mor Pelerin",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "cape_plain_pink",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Pembe Pelerin",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "cape_plain_white",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Beyaz Pelerin",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "cape_plain_yellow",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Güneş Sarısı Pelerin",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "cape_plain_orange",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Turuncu Pelerin",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "cape_plain_cyan",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Turkuaz Pelerin",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "cape_plain_gray",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Gri Pelerin",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "cape_plain_brown",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Kahverengi Pelerin",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "discord",
+   "slot": "cape",
+   "bone": "back",
+   "nameTr": "Discord",
+   "rarity": "legendary",
+   "price": 0
+  },
+  {
+   "id": "wings_angel_white",
+   "slot": "wings",
+   "bone": "back",
+   "nameTr": "Melek Kanatları",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "wings_angel_gold",
+   "slot": "wings",
+   "bone": "back",
+   "nameTr": "Altın Melek Kanatları",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "wings_angel_dark",
+   "slot": "wings",
+   "bone": "back",
+   "nameTr": "Kara Melek Kanatları",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "wings_angel_blue",
+   "slot": "wings",
+   "bone": "back",
+   "nameTr": "VanillaTurkey Kanatları",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "wings_ice",
+   "slot": "wings",
+   "bone": "back",
+   "nameTr": "Buz Kanatları",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "wings_rainbow",
+   "slot": "wings",
+   "bone": "back",
+   "nameTr": "Gökkuşağı Kanatları",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "wings_steel",
+   "slot": "wings",
+   "bone": "back",
+   "nameTr": "Çelik Kanatlar",
+   "rarity": "rare",
+   "price": 200
+  },
+  {
+   "id": "wings_galaxy",
+   "slot": "wings",
+   "bone": "back",
+   "nameTr": "Galaksi Kanatları",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "wings_phoenix",
+   "slot": "wings",
+   "bone": "back",
+   "nameTr": "Anka Kanatları",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "wings_flame",
+   "slot": "wings",
+   "bone": "back",
+   "nameTr": "Alev Kanatları",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "wings_electric",
+   "slot": "wings",
+   "bone": "back",
+   "nameTr": "Yıldırım Kanatları",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "wings_turkish",
+   "slot": "wings",
+   "bone": "back",
+   "nameTr": "Ay Yıldız Kanatları",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "wings_dragon_green",
+   "slot": "wings",
+   "bone": "back",
+   "nameTr": "Yeşil Ejderha Kanatları",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "wings_dragon_red",
+   "slot": "wings",
+   "bone": "back",
+   "nameTr": "Kızıl Ejderha Kanatları",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "wings_dragon_blue",
+   "slot": "wings",
+   "bone": "back",
+   "nameTr": "Mavi Ejderha Kanatları",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "wings_dragon_obsidian",
+   "slot": "wings",
+   "bone": "back",
+   "nameTr": "Obsidyen Ejderha Kanatları",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "wings_bat",
+   "slot": "wings",
+   "bone": "back",
+   "nameTr": "Yarasa Kanatları",
+   "rarity": "rare",
+   "price": 200
+  },
+  {
+   "id": "wings_demon",
+   "slot": "wings",
+   "bone": "back",
+   "nameTr": "Şeytan Kanatları",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "wings_butterfly_monarch",
+   "slot": "wings",
+   "bone": "back",
+   "nameTr": "Monarch Kelebek Kanatları",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "wings_butterfly_blue",
+   "slot": "wings",
+   "bone": "back",
+   "nameTr": "Mavi Kelebek Kanatları",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "wings_butterfly_pink",
+   "slot": "wings",
+   "bone": "back",
+   "nameTr": "Pembe Kelebek Kanatları",
+   "rarity": "rare",
+   "price": 200
+  },
+  {
+   "id": "wings_butterfly_green",
+   "slot": "wings",
+   "bone": "back",
+   "nameTr": "Yeşil Kelebek Kanatları",
+   "rarity": "rare",
+   "price": 200
+  },
+  {
+   "id": "wings_fairy",
+   "slot": "wings",
+   "bone": "back",
+   "nameTr": "Peri Kanatları",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "wings_bee",
+   "slot": "wings",
+   "bone": "back",
+   "nameTr": "Arı Kanatları",
+   "rarity": "rare",
+   "price": 200
+  },
+  {
+   "id": "wings_leaf",
+   "slot": "wings",
+   "bone": "back",
+   "nameTr": "Yaprak Kanatları",
+   "rarity": "rare",
+   "price": 200
+  },
+  {
+   "id": "wings_crystal",
+   "slot": "wings",
+   "bone": "back",
+   "nameTr": "Ametist Kanatlar",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "wings_ghost",
+   "slot": "wings",
+   "bone": "back",
+   "nameTr": "Hayalet Kanatları",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "wings_steampunk",
+   "slot": "wings",
+   "bone": "back",
+   "nameTr": "Buharlı Kanatlar",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "pet_cat_orange",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Turuncu Kedi",
+   "rarity": "common",
+   "price": 50
+  },
+  {
+   "id": "pet_cat_black",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Kara Kedi",
+   "rarity": "common",
+   "price": 50
+  },
+  {
+   "id": "pet_cat_white",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Beyaz Kedi",
+   "rarity": "rare",
+   "price": 200
+  },
+  {
+   "id": "pet_cat_siamese",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Siyam Kedisi",
+   "rarity": "rare",
+   "price": 200
+  },
+  {
+   "id": "pet_dog_shiba",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Shiba",
+   "rarity": "rare",
+   "price": 200
+  },
+  {
+   "id": "pet_dog_husky",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Haski",
+   "rarity": "rare",
+   "price": 200
+  },
+  {
+   "id": "pet_dog_dalmatian",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Dalmaçyalı",
+   "rarity": "rare",
+   "price": 200
+  },
+  {
+   "id": "pet_dog_golden",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Golden Retriever",
+   "rarity": "common",
+   "price": 50
+  },
+  {
+   "id": "pet_wolf",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Kurt Yavrusu",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "pet_fox",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Tilki",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "pet_panda",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Panda",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "pet_red_panda",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Kızıl Panda",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "pet_rabbit_white",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Beyaz Tavşan",
+   "rarity": "common",
+   "price": 50
+  },
+  {
+   "id": "pet_rabbit_brown",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Kahverengi Tavşan",
+   "rarity": "common",
+   "price": 50
+  },
+  {
+   "id": "pet_pig",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Domuz",
+   "rarity": "common",
+   "price": 50
+  },
+  {
+   "id": "pet_sheep",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Koyun",
+   "rarity": "common",
+   "price": 50
+  },
+  {
+   "id": "pet_chick",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Civciv",
+   "rarity": "common",
+   "price": 0
+  },
+  {
+   "id": "pet_duck",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Ördek",
+   "rarity": "common",
+   "price": 0
+  },
+  {
+   "id": "pet_penguin",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Penguen",
+   "rarity": "rare",
+   "price": 200
+  },
+  {
+   "id": "pet_owl",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Baykuş",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "pet_parrot",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Papağan",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "pet_bee",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Arı",
+   "rarity": "common",
+   "price": 0
+  },
+  {
+   "id": "pet_bat",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Yarasa",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "pet_dragon_green",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Yeşil Ejderha Yavrusu",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "pet_dragon_red",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Kızıl Ejderha Yavrusu",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "pet_drone",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Mini Drone",
+   "rarity": "rare",
+   "price": 200
+  },
+  {
+   "id": "pet_ufo",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Mini UFO",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "pet_phoenix",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Anka Yavrusu",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "pet_slime",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Balçık",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "pet_magma",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Magma Küpü",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "pet_ghost",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Hayalet",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "pet_jellyfish",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Denizanası",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "pet_creeper",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Mini Creeper",
+   "rarity": "rare",
+   "price": 200
+  },
+  {
+   "id": "pet_turtle",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Kaplumbağa",
+   "rarity": "common",
+   "price": 0
+  },
+  {
+   "id": "pet_frog",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Kurbağa",
+   "rarity": "common",
+   "price": 0
+  },
+  {
+   "id": "pet_axolotl",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Aksolotl",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "pet_dino",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Mini Dino",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "pet_sun_spirit",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Güneş Ruhu",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "pet_cloud",
+   "slot": "pet",
+   "bone": "pet",
+   "nameTr": "Mini Bulut",
+   "rarity": "rare",
+   "price": 200
+  },
+  {
+   "id": "aura_embers",
+   "slot": "aura",
+   "bone": "aura",
+   "nameTr": "Köz Aurası",
+   "rarity": "rare",
+   "price": 200
+  },
+  {
+   "id": "aura_snow",
+   "slot": "aura",
+   "bone": "aura",
+   "nameTr": "Kar Yağışı",
+   "rarity": "rare",
+   "price": 200
+  },
+  {
+   "id": "aura_hearts",
+   "slot": "aura",
+   "bone": "aura",
+   "nameTr": "Kalp Aurası",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "aura_stars",
+   "slot": "aura",
+   "bone": "aura",
+   "nameTr": "Yıldız Tozu",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "aura_notes",
+   "slot": "aura",
+   "bone": "aura",
+   "nameTr": "Müzik Notaları",
+   "rarity": "rare",
+   "price": 200
+  },
+  {
+   "id": "aura_souls",
+   "slot": "aura",
+   "bone": "aura",
+   "nameTr": "Ruh Aurası",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "aura_leaves",
+   "slot": "aura",
+   "bone": "aura",
+   "nameTr": "Yaprak Yağmuru",
+   "rarity": "rare",
+   "price": 200
+  },
+  {
+   "id": "aura_sakura",
+   "slot": "aura",
+   "bone": "aura",
+   "nameTr": "Sakura Yağmuru",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "aura_bubbles",
+   "slot": "aura",
+   "bone": "aura",
+   "nameTr": "Baloncuklar",
+   "rarity": "rare",
+   "price": 200
+  },
+  {
+   "id": "aura_fireflies",
+   "slot": "aura",
+   "bone": "aura",
+   "nameTr": "Ateşböcekleri",
+   "rarity": "rare",
+   "price": 200
+  },
+  {
+   "id": "aura_ender",
+   "slot": "aura",
+   "bone": "aura",
+   "nameTr": "Ender Aurası",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "aura_coins",
+   "slot": "aura",
+   "bone": "aura",
+   "nameTr": "Altın Yağmuru",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "aura_bats",
+   "slot": "aura",
+   "bone": "aura",
+   "nameTr": "Yarasa Sürüsü",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "aura_lightning",
+   "slot": "aura",
+   "bone": "aura",
+   "nameTr": "Yıldırım Aurası",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "aura_blue_sparks",
+   "slot": "aura",
+   "bone": "aura",
+   "nameTr": "Mavi Kıvılcım",
+   "rarity": "rare",
+   "price": 200
+  },
+  {
+   "id": "aura_glitch",
+   "slot": "aura",
+   "bone": "aura",
+   "nameTr": "Glitch Aurası",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "aura_rainbow",
+   "slot": "aura",
+   "bone": "aura",
+   "nameTr": "Gökkuşağı Halkaları",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "aura_galaxy",
+   "slot": "aura",
+   "bone": "aura",
+   "nameTr": "Galaksi Halkası",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "aura_magic_blue",
+   "slot": "aura",
+   "bone": "aura",
+   "nameTr": "Mavi Büyü Çemberi",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "aura_magic_red",
+   "slot": "aura",
+   "bone": "aura",
+   "nameTr": "Kızıl Büyü Çemberi",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "aura_magic_purple",
+   "slot": "aura",
+   "bone": "aura",
+   "nameTr": "Mor Büyü Çemberi",
+   "rarity": "legendary",
+   "price": 800
+  },
+  {
+   "id": "aura_tornado",
+   "slot": "aura",
+   "bone": "aura",
+   "nameTr": "Kasırga",
+   "rarity": "epic",
+   "price": 400
+  },
+  {
+   "id": "aura_ripple",
+   "slot": "aura",
+   "bone": "aura",
+   "nameTr": "Dalga Halkaları",
+   "rarity": "rare",
+   "price": 200
+  },
+  {
+   "id": "hit_ring_white",
+   "slot": "hit",
+   "bone": "hit",
+   "nameTr": "Beyaz Halka",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "hit_ring_cyan",
+   "slot": "hit",
+   "bone": "hit",
+   "nameTr": "Camgöbeği Halka",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "hit_ring_pink",
+   "slot": "hit",
+   "bone": "hit",
+   "nameTr": "Pembe Halka",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "hit_sparks_gold",
+   "slot": "hit",
+   "bone": "hit",
+   "nameTr": "Altın Kıvılcım",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "hit_sparks_red",
+   "slot": "hit",
+   "bone": "hit",
+   "nameTr": "Kızıl Kıvılcım",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "hit_confetti",
+   "slot": "hit",
+   "bone": "hit",
+   "nameTr": "Konfeti",
+   "rarity": "common",
+   "price": 25
+  },
+  {
+   "id": "hit_slash_white",
+   "slot": "hit",
+   "bone": "hit",
+   "nameTr": "Beyaz Kesik",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "hit_slash_crimson",
+   "slot": "hit",
+   "bone": "hit",
+   "nameTr": "Kızıl Çapraz Kesik",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "hit_shockwave",
+   "slot": "hit",
+   "bone": "hit",
+   "nameTr": "Şok Dalgası",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "hit_star",
+   "slot": "hit",
+   "bone": "hit",
+   "nameTr": "Yıldız Patlaması",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "hit_cross",
+   "slot": "hit",
+   "bone": "hit",
+   "nameTr": "Haç Parlaması",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "hit_ice",
+   "slot": "hit",
+   "bone": "hit",
+   "nameTr": "Buz Parçaları",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "hit_poison",
+   "slot": "hit",
+   "bone": "hit",
+   "nameTr": "Zehir Bulutu",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "hit_pixel",
+   "slot": "hit",
+   "bone": "hit",
+   "nameTr": "Piksel Dağılımı",
+   "rarity": "rare",
+   "price": 100
+  },
+  {
+   "id": "hit_crit",
+   "slot": "hit",
+   "bone": "hit",
+   "nameTr": "Kritik Vuruş",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "hit_lightning",
+   "slot": "hit",
+   "bone": "hit",
+   "nameTr": "Şimşek Çarpması",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "hit_fire",
+   "slot": "hit",
+   "bone": "hit",
+   "nameTr": "Ateş Patlaması",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "hit_hearts",
+   "slot": "hit",
+   "bone": "hit",
+   "nameTr": "Kalp Patlaması",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "hit_void",
+   "slot": "hit",
+   "bone": "hit",
+   "nameTr": "Boşluk Çöküşü",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "hit_spiral",
+   "slot": "hit",
+   "bone": "hit",
+   "nameTr": "Spiral Dalga",
+   "rarity": "epic",
+   "price": 200
+  },
+  {
+   "id": "hit_coins",
+   "slot": "hit",
+   "bone": "hit",
+   "nameTr": "Altın Yağmuru",
+   "rarity": "legendary",
+   "price": 400
+  },
+  {
+   "id": "hit_rainbow",
+   "slot": "hit",
+   "bone": "hit",
+   "nameTr": "Gökkuşağı Dalgası",
+   "rarity": "legendary",
+   "price": 400
+  },
+  {
+   "id": "hit_galaxy",
+   "slot": "hit",
+   "bone": "hit",
+   "nameTr": "Galaksi Patlaması",
+   "rarity": "legendary",
+   "price": 400
+  }
+ ]
+}
