@@ -32,7 +32,7 @@ jobs:
     timeout-minutes: 120
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Resolve version
         id: ver
@@ -47,7 +47,7 @@ jobs:
 
       # ---- web UI (same React launcher UI as Android, built for WKWebView) ----
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 22
 
@@ -64,7 +64,7 @@ jobs:
 
       # ---- native app (follows Amethyst-iOS' own Makefile / development.yml) ----
       - name: Setup Java 8 (boot JDK for JavaApp)
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: zulu
           java-version: "8"
